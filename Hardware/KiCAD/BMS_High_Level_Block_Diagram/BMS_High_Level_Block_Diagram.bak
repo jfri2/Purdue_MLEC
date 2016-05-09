@@ -1,0 +1,474 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:FritzLib
+LIBS:BMS_High_Level_Block_Diagram-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Battery Management System"
+Date "2016-04-13"
+Rev "0.0"
+Comp "Purdue University"
+Comment1 "John Fritz"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_01X02 P5
+U 1 1 5733C925
+P 3300 3850
+F 0 "P5" H 3300 4000 50  0000 C CNN
+F 1 "BMS_OUT" V 3400 3850 50  0000 C CNN
+F 2 "" H 3300 3850 50  0001 C CNN
+F 3 "" H 3300 3850 50  0000 C CNN
+	1    3300 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L RELAY RL1
+U 1 1 5733CCBA
+P 5550 2050
+F 0 "RL1" V 6050 2350 50  0000 C CNN
+F 1 "MAIN_CONTACTOR_1" V 5950 2050 50  0000 C CNN
+F 2 "" H 5400 2050 50  0001 C CNN
+F 3 "" H 5400 2050 50  0000 C CNN
+	1    5550 2050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L RELAY RL2
+U 1 1 5733CD93
+P 7250 2850
+F 0 "RL2" H 7650 3100 50  0000 C CNN
+F 1 "ASTRING_CONTACTOR" H 8000 2600 50  0000 C CNN
+F 2 "" H 7100 2850 50  0001 C CNN
+F 3 "" H 7100 2850 50  0000 C CNN
+	1    7250 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L RELAY RL3
+U 1 1 5733D16D
+P 9500 2850
+F 0 "RL3" H 9900 3100 50  0000 C CNN
+F 1 "BSTRING_CONTACTOR" H 10250 2600 50  0000 C CNN
+F 2 "" H 9350 2850 50  0001 C CNN
+F 3 "" H 9350 2850 50  0000 C CNN
+	1    9500 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L RELAY RL4
+U 1 1 5733D85C
+P 5650 5600
+F 0 "RL4" V 6150 5900 50  0000 C CNN
+F 1 "PRECHARGE_CONTACTOR_1" V 6050 5600 50  0000 C CNN
+F 2 "" H 5500 5600 50  0001 C CNN
+F 3 "" H 5500 5600 50  0000 C CNN
+	1    5650 5600
+	0    -1   -1   0   
+$EndComp
+$Comp
+L RELAY RL5
+U 1 1 5733D8E7
+P 4300 6700
+F 0 "RL5" V 4800 7000 50  0000 C CNN
+F 1 "MAIN_CONTACTOR_2" V 4700 6700 50  0000 C CNN
+F 2 "" H 4150 6700 50  0001 C CNN
+F 3 "" H 4150 6700 50  0000 C CNN
+	1    4300 6700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_01X02 P1
+U 1 1 5733E91C
+P 5550 2850
+F 0 "P1" V 5550 2650 50  0000 C CNN
+F 1 "MAIN_CONT" V 5650 2850 50  0000 C CNN
+F 2 "" H 5550 2850 50  0001 C CNN
+F 3 "" H 5550 2850 50  0000 C CNN
+	1    5550 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_01X02 P7
+U 1 1 5733E9D9
+P 5650 6350
+F 0 "P7" H 5650 6500 50  0000 C CNN
+F 1 "BMS_OUT" V 5750 6350 50  0000 C CNN
+F 2 "" H 5650 6350 50  0001 C CNN
+F 3 "" H 5650 6350 50  0000 C CNN
+	1    5650 6350
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_01X02 P8
+U 1 1 5733ECDB
+P 4300 7500
+F 0 "P8" H 4300 7650 50  0000 C CNN
+F 1 "BMS_OUT" V 4400 7500 50  0000 C CNN
+F 2 "" H 4300 7500 50  0001 C CNN
+F 3 "" H 4300 7500 50  0000 C CNN
+	1    4300 7500
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_01X02 P2
+U 1 1 5733EE09
+P 6400 2850
+F 0 "P2" H 6550 2800 50  0000 C CNN
+F 1 "ASTR_CONT" H 6700 2900 50  0000 C CNN
+F 2 "" H 6400 2850 50  0001 C CNN
+F 3 "" H 6400 2850 50  0000 C CNN
+	1    6400 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L CONN_01X02 P3
+U 1 1 5733EE8D
+P 8650 2850
+F 0 "P3" H 8800 2800 50  0000 C CNN
+F 1 "BSTR_CONT" H 8950 2900 50  0000 C CNN
+F 2 "" H 8650 2850 50  0001 C CNN
+F 3 "" H 8650 2850 50  0000 C CNN
+	1    8650 2850
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3550 6650 3950 6650
+Wire Wire Line
+	3550 3900 3550 5100
+Wire Wire Line
+	3550 5100 3550 5550
+Wire Wire Line
+	3550 5550 3550 6650
+Wire Wire Line
+	3550 3900 3500 3900
+Wire Wire Line
+	9075 2600 8950 2600
+Wire Wire Line
+	8950 2600 8950 2800
+Wire Wire Line
+	8950 2800 8850 2800
+Wire Wire Line
+	8850 2900 8950 2900
+Wire Wire Line
+	8950 2900 8950 3100
+Wire Wire Line
+	8950 3100 9100 3100
+Wire Wire Line
+	6600 2800 6700 2800
+Wire Wire Line
+	6700 2800 6700 2600
+Wire Wire Line
+	6700 2600 6825 2600
+Wire Wire Line
+	6850 3100 6700 3100
+Wire Wire Line
+	6700 3100 6700 2900
+Wire Wire Line
+	6700 2900 6600 2900
+Wire Wire Line
+	5300 2475 5300 2575
+Wire Wire Line
+	5300 2575 5500 2575
+Wire Wire Line
+	5500 2575 5500 2650
+Wire Wire Line
+	5600 2650 5600 2575
+Wire Wire Line
+	5600 2575 5800 2575
+Wire Wire Line
+	5800 2575 5800 2450
+Wire Wire Line
+	5600 6150 5600 6075
+Wire Wire Line
+	5600 6075 5400 6075
+Wire Wire Line
+	5400 6075 5400 6025
+Wire Wire Line
+	5700 6150 5700 6075
+Wire Wire Line
+	5700 6075 5900 6075
+Wire Wire Line
+	5900 6075 5900 6000
+Wire Wire Line
+	6000 5550 6850 5550
+Wire Wire Line
+	6850 5550 7300 5550
+Wire Wire Line
+	7300 5550 9550 5550
+Wire Wire Line
+	9550 5550 10200 5550
+Connection ~ 7300 5550
+$Comp
+L Big_Battery BAT1
+U 1 1 57340822
+P 7300 4900
+F 0 "BAT1" H 7050 5350 60  0000 C CNN
+F 1 "48V" H 7950 5000 197 0000 C CNN
+F 2 "" H 7300 4900 60  0001 C CNN
+F 3 "" H 7300 4900 60  0000 C CNN
+	1    7300 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Big_Battery BAT2
+U 1 1 5734099F
+P 9550 4900
+F 0 "BAT2" H 9300 5350 60  0000 C CNN
+F 1 "48V" H 10200 5000 197 0000 C CNN
+F 2 "" H 9550 4900 60  0001 C CNN
+F 3 "" H 9550 4900 60  0000 C CNN
+	1    9550 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7300 3200 7300 3300
+Wire Wire Line
+	7300 3300 7300 4300
+Wire Wire Line
+	7300 5400 7300 5550
+Wire Wire Line
+	9550 5550 9550 5400
+Wire Wire Line
+	9550 3200 9550 3300
+Wire Wire Line
+	9550 3300 9550 4300
+Wire Wire Line
+	5900 2000 6800 2000
+Wire Wire Line
+	6800 2000 7300 2000
+Wire Wire Line
+	7300 2000 9550 2000
+Connection ~ 7300 2000
+$Comp
+L Hall_Effect U1
+U 1 1 57343269
+P 7300 3850
+F 0 "U1" H 7450 4050 60  0000 C CNN
+F 1 "Hall_Effect" H 7000 4100 60  0000 C CNN
+F 2 "" H 7300 3850 60  0001 C CNN
+F 3 "" H 7300 3850 60  0000 C CNN
+	1    7300 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Hall_Effect U2
+U 1 1 573432C2
+P 9550 3850
+F 0 "U2" H 9700 4050 60  0000 C CNN
+F 1 "Hall_Effect" H 9250 4100 60  0000 C CNN
+F 2 "" H 9550 3850 60  0001 C CNN
+F 3 "" H 9550 3850 60  0000 C CNN
+	1    9550 3850
+	1    0    0    -1  
+$EndComp
+Text GLabel 8750 3750 0    47   UnSpc ~ 0
+MLEC_5V
+Text GLabel 8750 3850 0    47   Output ~ 0
+BSTR_ISEN
+Text GLabel 8750 3950 0    47   UnSpc ~ 0
+MLEC_GND
+Wire Wire Line
+	8750 3750 8950 3750
+Wire Wire Line
+	8950 3850 8750 3850
+Wire Wire Line
+	8750 3950 8950 3950
+Text GLabel 6500 3750 0    47   UnSpc ~ 0
+MLEC_5V
+Text GLabel 6500 3850 0    47   Output ~ 0
+ASTR_ISEN
+Text GLabel 6500 3950 0    47   UnSpc ~ 0
+MLEC_GND
+Wire Wire Line
+	6500 3750 6700 3750
+Wire Wire Line
+	6700 3850 6500 3850
+Wire Wire Line
+	6500 3950 6700 3950
+Wire Wire Line
+	7300 2000 7300 2500
+Wire Wire Line
+	9550 2000 9550 2500
+Text GLabel 7000 1650 2    60   Output ~ 0
+MAIN_1_VSEN_2
+Wire Wire Line
+	7000 1650 6800 1650
+Text GLabel 4100 1650 0    60   Input ~ 0
+HIGH_SIDE_TEST_INJECT
+Wire Wire Line
+	4100 1650 4300 1650
+Wire Wire Line
+	4300 1650 4300 2000
+Connection ~ 4300 2000
+Text GLabel 10200 5550 2    61   UnSpc ~ 0
+MLEC_GND
+Connection ~ 9550 5550
+Text GLabel 3300 5100 0    60   Input ~ 0
+LOW_SIDE_TEST_INJECT
+Wire Wire Line
+	3300 5100 3550 5100
+Connection ~ 3550 5100
+Wire Wire Line
+	6850 6650 6850 5550
+Connection ~ 6850 5550
+Wire Wire Line
+	4050 7125 4050 7200
+Wire Wire Line
+	4050 7200 4250 7200
+Wire Wire Line
+	4250 7200 4250 7300
+Wire Wire Line
+	4350 7300 4350 7200
+Wire Wire Line
+	4350 7200 4550 7200
+Wire Wire Line
+	4550 7200 4550 7100
+$Comp
+L CONN_01X02 P6
+U 1 1 57347331
+P 4550 5100
+F 0 "P6" H 4550 5250 50  0000 C CNN
+F 1 "PCRG" V 4650 5100 50  0000 C CNN
+F 2 "" H 4550 5100 50  0001 C CNN
+F 3 "" H 4550 5100 50  0000 C CNN
+	1    4550 5100
+	0    -1   -1   0   
+$EndComp
+Connection ~ 3550 5550
+Wire Wire Line
+	4500 5550 4500 5300
+Wire Wire Line
+	4600 5300 4600 5550
+Wire Wire Line
+	3550 2000 3550 3800
+Wire Wire Line
+	3550 3800 3500 3800
+Text GLabel 7450 3300 2    60   Output ~ 0
+ASTR_VSEN_2
+Wire Wire Line
+	7450 3300 7300 3300
+Connection ~ 7300 3300
+Text GLabel 9700 3300 2    60   Output ~ 0
+BSTR_VSEN_2
+Wire Wire Line
+	9700 3300 9550 3300
+Connection ~ 9550 3300
+Wire Wire Line
+	6800 1650 6800 2000
+Connection ~ 6800 2000
+Text Notes 1700 1150 0    394  ~ 0
+Battery Management System
+Wire Wire Line
+	4650 6650 6850 6650
+Wire Wire Line
+	4500 5550 3550 5550
+Wire Wire Line
+	4600 5550 5300 5550
+Wire Wire Line
+	3550 2000 4300 2000
+Wire Wire Line
+	4300 2000 5200 2000
+Text GLabel 2400 3150 2    47   Input ~ 0
+HIGH_SIDE_TEST_INJECT
+Text GLabel 1700 2650 0    47   Input ~ 0
+LOW_SIDE_TEST_INJECT
+Text GLabel 1700 2850 0    47   UnSpc ~ 0
+MLEC_GND
+Text GLabel 2400 2950 2    47   UnSpc ~ 0
+MLEC_GND
+Text GLabel 1700 2950 0    47   UnSpc ~ 0
+MLEC_GND
+Text GLabel 2400 2550 2    47   Output ~ 0
+ASTR_ISEN
+Text GLabel 1700 2550 0    47   Output ~ 0
+BSTR_ISEN
+Text GLabel 2400 2750 2    47   Output ~ 0
+MAIN_1_VSEN_2
+Text GLabel 1700 2750 0    47   Output ~ 0
+ASTR_VSEN_2
+Text GLabel 2400 2650 2    47   Output ~ 0
+BSTR_VSEN_2
+Text GLabel 1700 3150 0    47   UnSpc ~ 0
+MLEC_5V
+Text GLabel 2400 3050 2    47   UnSpc ~ 0
+MLEC_5V
+$Comp
+L CONN_02X07 P?
+U 1 1 570ED23B
+P 2050 2850
+F 0 "P?" H 2050 3250 50  0000 C CNN
+F 1 "MLEC_DAQ_CONN" H 2050 2400 50  0000 C CNN
+F 2 "" H 2050 1650 50  0000 C CNN
+F 3 "" H 2050 1650 50  0000 C CNN
+	1    2050 2850
+	1    0    0    -1  
+$EndComp
+Text GLabel 2400 2850 2    47   UnSpc ~ 0
+MLEC_GND
+Text GLabel 1700 3050 0    47   UnSpc ~ 0
+MLEC_5V
+Wire Wire Line
+	2300 2550 2400 2550
+Wire Wire Line
+	2400 2650 2300 2650
+Wire Wire Line
+	2300 2750 2400 2750
+Wire Wire Line
+	2300 2850 2400 2850
+Wire Wire Line
+	2300 2950 2400 2950
+Wire Wire Line
+	2300 3050 2400 3050
+Wire Wire Line
+	2300 3150 2400 3150
+Wire Wire Line
+	1800 3150 1700 3150
+Wire Wire Line
+	1700 3050 1800 3050
+Wire Wire Line
+	1800 2950 1700 2950
+Wire Wire Line
+	1700 2850 1800 2850
+Wire Wire Line
+	1800 2750 1700 2750
+Wire Wire Line
+	1700 2650 1800 2650
+Wire Wire Line
+	1700 2550 1800 2550
+Text Notes 750  2250 0    100  ~ 0
+TODO:: CHANGE TO REFLECT ACTUAL
+$EndSCHEMATC

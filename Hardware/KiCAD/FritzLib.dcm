@@ -1,0 +1,31 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP PC3H4A
+D SOP4, AC/DC Optocoupler, Vce 70V, CTR 100-250%
+K NPN AC DC Optocoupler
+F http://www.sharpsma.com/webfm_send/395
+$ENDCMP
+#
+$CMP PC3H71x
+D SOP4, AC/DC Optocoupler, Vce 70V, CTR 100-250%
+K NPN AC DC Optocoupler
+F http://www.sharpsme.com/download/pc3h4-epdf
+$ENDCMP
+#
+$CMP R
+D Resistor
+K R DEV
+$ENDCMP
+#
+$CMP R_HS
+D Resistor
+K R DEV
+$ENDCMP
+#
+$CMP microSD_Card
+D SD Card Reader
+K CONN SD
+F http://portal.fciconnect.com/Comergent//fci/drawing/10067847.pdf
+$ENDCMP
+#
+#End Doc Library

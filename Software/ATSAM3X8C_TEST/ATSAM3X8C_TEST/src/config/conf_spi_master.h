@@ -13,7 +13,7 @@
 
 															// These delay values are OLED specifc
 #define CONFIG_SPI_MASTER_DELAY_BCS				2			// Delay before CS assert 20 ns @ 84 MHz clk
-#define CONFIG_SPI_MASTER_DELAY_BCT				7			// Delay between transfers 80 ns @ 84 MHz clk
+#define CONFIG_SPI_MASTER_DELAY_BCT				0			// Delay between transfers 0 ns @ 84 MHz clk
 #define CONFIG_SPI_MASTER_DELAY_BS				6			// Delay Before sck start 60 ns @ 84 MHz clk
 #define CONFIG_SPI_MASTER_BITS_PER_TRANSFER		8
 #define CONFIG_SPI_MASTER_BAUD					500000

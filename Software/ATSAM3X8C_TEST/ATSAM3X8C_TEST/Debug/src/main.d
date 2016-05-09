@@ -137,7 +137,7 @@ src/main.d src/main.o: ../src/main.c ../src/asf.h \
  ../src/ASF/common/services/usb/udc/udc.h \
  ../src/ASF/common/services/usb/udc/udd.h \
  ../src/ASF/sam/drivers/wdt/wdt.h \
- ../src/ASF/sam/drivers/pio/pio_handler.h
+ ../src/ASF/sam/drivers/pio/pio_handler.h ../src/oled.c ../src/oled.h
 
 ../src/asf.h:
 
@@ -430,3 +430,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 ../src/ASF/sam/drivers/wdt/wdt.h:
 
 ../src/ASF/sam/drivers/pio/pio_handler.h:
+
+../src/oled.c:
+
+../src/oled.h:

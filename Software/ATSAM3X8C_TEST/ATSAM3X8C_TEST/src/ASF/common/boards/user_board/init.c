@@ -19,11 +19,6 @@ void board_init(void) {
 	 */
 	
 	/***************************************************************************************/
-	/* Watchdog Timer Initialization                                                       */
-	/***************************************************************************************/
-	wdt_disable(WDT);
-  
-	/***************************************************************************************/
 	/* Generic Board Initializations                                                       */
 	/***************************************************************************************/  
 	irq_initialize_vectors();
@@ -39,6 +34,12 @@ void board_init(void) {
 	pio_set_output(CONTACTORS_PIO, CONTACTORS_PINS, LOW, DISABLE, ENABLE);
 	pio_set_output(BUZ_LED_PIO, BUZ_LED_PINS, LOW, DISABLE, ENABLE);
 	
+	
+	/***************************************************************************************/
+	/* Watchdog Timer Initialization                                                       */
+	/***************************************************************************************/
+	wdt_disable(WDT);
+  
 	/***************************************************************************************/
 	/* USART Initialization                                                                */
 	/***************************************************************************************/
@@ -72,12 +73,12 @@ void board_init(void) {
 	spi_set_transfer_delay(OLED_SPI, OLED_CS_ID, CONFIG_SPI_MASTER_DELAY_BS, 
 		CONFIG_SPI_MASTER_DELAY_BCT);
 	spi_set_bits_per_transfer(OLED_SPI, OLED_CS_ID, CONFIG_SPI_MASTER_BITS_PER_TRANSFER);
-	spi_set_baudrate_div(OLED_SPI, OLED_CS_ID, spi_calc_baudrate_div(CONFIG_SPI_MASTER_BAUD),
-		 sysclk_get_peripheral_hz());
+	spi_set_baudrate_div(OLED_SPI, OLED_CS_ID, spi_calc_baudrate_div((CONFIG_SPI_MASTER_BAUD),
+		 sysclk_get_peripheral_hz()));
 	spi_configure_cs_behavior(OLED_SPI, OLED_CS_ID, SPI_CS_KEEP_LOW);
 	spi_set_clock_polarity(OLED_SPI, OLED_CS_ID, CONFIG_SPI_MASTER_POLARITY);
 	spi_set_clock_phase(OLED_SPI, OLED_CS_ID, CONFIG_SPI_MASTER_PHASE);
-	spi_enable();
+	spi_enable(OLED_SPI);
 	
 	/***************************************************************************************/
 	/* CAN Initialization                                                                  */

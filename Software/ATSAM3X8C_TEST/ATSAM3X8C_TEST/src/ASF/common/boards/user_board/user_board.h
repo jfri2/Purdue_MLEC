@@ -93,30 +93,30 @@
 	#define OLED_SPI_MOSI_PIN	PIO_PA26
 	#define OLED_SPI_SCK_PIN	PIO_PA27
 	#define OLED_SPI_CS_PIN		PIO_PA28
-	#define OLED_SPI_PINS		(OLED_SPI_MISO_PIN)|(OLED_SPI_MOSI_PIN) \
-								(OLED_SPI_SCK_PIN)|(OLED_SPI_CS_PIN)	
+	#define OLED_SPI_PINS		((OLED_SPI_MISO_PIN)|(OLED_SPI_MOSI_PIN) \
+								|(OLED_SPI_SCK_PIN)|(OLED_SPI_CS_PIN))	
 	#define OLED_RST_PIO		PIOB
 	#define OLED_RST_PIN		PIO_PB21
 #endif
 
 /*! RLEC CAN Pin Definitions */
 #ifdef CONF_BOARD_RLEC_CAN
-	#define RLEC_CAN_PIO	PIOA
-	#define RLEC_CAN_TX		PIO_PA0
-	#define RLEC_CAN_RX		PIO_PA1
-	#define RLEC_CAN_PINS	(RLEC_CAN_TX)|(RLEC_CAN_RX)
-	#define RLEC_CAN_ID		ID_CAN0
-	#define RLEC_CAN		CAN0
+	#define RLEC_CAN_PIO		PIOA
+	#define RLEC_CAN_TX_PIN		PIO_PA0
+	#define RLEC_CAN_RX_PIN		PIO_PA1
+	#define RLEC_CAN_PINS		(RLEC_CAN_TX_PIN)|(RLEC_CAN_RX_PIN)
+	#define RLEC_CAN_ID			ID_CAN0
+	#define RLEC_CAN			CAN0
 #endif
 
 /*! Vehicle CAN Pin Definitions */
 #ifdef CONF_BOARD_V_CAN
-	#define V_CAN_PIO		PIOB
-	#define V_CAN_TX		PIO_PB14
-	#define V_CAN_RX		PIO_PB15
-	#define V_CAN_PINS		(V_CAN_TX)|(V_CAN_RX)
-	#define V_CAN_ID		ID_CAN1
-	#define V_CAN			CAN1
+	#define V_CAN_PIO			PIOB
+	#define V_CAN_TX_PIN		PIO_PB14
+	#define V_CAN_RX_PIN		PIO_PB15
+	#define V_CAN_PINS			(V_CAN_TX_PIN)|(V_CAN_RX_PIN)
+	#define V_CAN_ID			ID_CAN1
+	#define V_CAN				CAN1
 #endif	
 
 

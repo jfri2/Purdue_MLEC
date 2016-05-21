@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "blink3", "blink3.cproj", "{B2DE2834-6E63-4A88-AA15-7BA5E95F6F58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Release|ARM = Release|ARM
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2DE2834-6E63-4A88-AA15-7BA5E95F6F58}.Debug|ARM.ActiveCfg = Debug|ARM
+		{B2DE2834-6E63-4A88-AA15-7BA5E95F6F58}.Debug|ARM.Build.0 = Debug|ARM
+		{B2DE2834-6E63-4A88-AA15-7BA5E95F6F58}.Release|ARM.ActiveCfg = Release|ARM
+		{B2DE2834-6E63-4A88-AA15-7BA5E95F6F58}.Release|ARM.Build.0 = Release|ARM
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

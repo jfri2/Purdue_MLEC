@@ -1,0 +1,76 @@
+\hypertarget{uart_8c}{}\section{uart.\+c File Reference}
+\label{uart_8c}\index{uart.\+c@{uart.\+c}}
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}gpio.\+c\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{uart_8c_aa83798b7dffa125b6e7896802f38f20a}{\+\_\+\+U\+A\+R\+T\+\_\+\+C\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{uart_8c_a1d5e43da42875080c736c908189d7417}{uart\+\_\+init} (uint16\+\_\+t baud\+Rate)
+\item 
+uint8\+\_\+t \hyperlink{uart_8c_ab70f49141f74fee5198b7e13cbdd7cc4}{uart\+\_\+check\+Error\+Register} (void)
+\item 
+void \hyperlink{uart_8c_ae41130eecf6874b597cefe841db0ae60}{uart\+\_\+\+Send\+Byte} (uint8\+\_\+t data)
+\item 
+uint8\+\_\+t \hyperlink{uart_8c_a65d445f8fe6454ff1f796560e9944f68}{uart\+\_\+\+Get\+Byte} (void)
+\item 
+void \hyperlink{uart_8c_a1b1176652ce90c89bf8541481d3ba04b}{uart\+\_\+\+Send\+Byte\+Stream} (uint8\+\_\+t data, F\+I\+LE $\ast$stream)
+\item 
+uint8\+\_\+t \hyperlink{uart_8c_a3d8013e9f6fe91e768e34c63863e06ab}{uart\+\_\+\+Get\+Byte\+Stream} (F\+I\+LE $\ast$stream)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{uart.\+c@{uart.\+c}!\+\_\+\+U\+A\+R\+T\+\_\+\+C\+\_\+@{\+\_\+\+U\+A\+R\+T\+\_\+\+C\+\_\+}}
+\index{\+\_\+\+U\+A\+R\+T\+\_\+\+C\+\_\+@{\+\_\+\+U\+A\+R\+T\+\_\+\+C\+\_\+}!uart.\+c@{uart.\+c}}
+\subsubsection[{\texorpdfstring{\+\_\+\+U\+A\+R\+T\+\_\+\+C\+\_\+}{_UART_C_}}]{\setlength{\rightskip}{0pt plus 5cm}\#define \+\_\+\+U\+A\+R\+T\+\_\+\+C\+\_\+}\hypertarget{uart_8c_aa83798b7dffa125b6e7896802f38f20a}{}\label{uart_8c_aa83798b7dffa125b6e7896802f38f20a}
+
+
+\subsection{Function Documentation}
+\index{uart.\+c@{uart.\+c}!uart\+\_\+check\+Error\+Register@{uart\+\_\+check\+Error\+Register}}
+\index{uart\+\_\+check\+Error\+Register@{uart\+\_\+check\+Error\+Register}!uart.\+c@{uart.\+c}}
+\subsubsection[{\texorpdfstring{uart\+\_\+check\+Error\+Register(void)}{uart_checkErrorRegister(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t uart\+\_\+check\+Error\+Register (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{uart_8c_ab70f49141f74fee5198b7e13cbdd7cc4}{}\label{uart_8c_ab70f49141f74fee5198b7e13cbdd7cc4}
+\index{uart.\+c@{uart.\+c}!uart\+\_\+\+Get\+Byte@{uart\+\_\+\+Get\+Byte}}
+\index{uart\+\_\+\+Get\+Byte@{uart\+\_\+\+Get\+Byte}!uart.\+c@{uart.\+c}}
+\subsubsection[{\texorpdfstring{uart\+\_\+\+Get\+Byte(void)}{uart_GetByte(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t uart\+\_\+\+Get\+Byte (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{uart_8c_a65d445f8fe6454ff1f796560e9944f68}{}\label{uart_8c_a65d445f8fe6454ff1f796560e9944f68}
+\index{uart.\+c@{uart.\+c}!uart\+\_\+\+Get\+Byte\+Stream@{uart\+\_\+\+Get\+Byte\+Stream}}
+\index{uart\+\_\+\+Get\+Byte\+Stream@{uart\+\_\+\+Get\+Byte\+Stream}!uart.\+c@{uart.\+c}}
+\subsubsection[{\texorpdfstring{uart\+\_\+\+Get\+Byte\+Stream(\+F\+I\+L\+E $\ast$stream)}{uart_GetByteStream(FILE *stream)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t uart\+\_\+\+Get\+Byte\+Stream (
+\begin{DoxyParamCaption}
+\item[{F\+I\+LE $\ast$}]{stream}
+\end{DoxyParamCaption}
+)}\hypertarget{uart_8c_a3d8013e9f6fe91e768e34c63863e06ab}{}\label{uart_8c_a3d8013e9f6fe91e768e34c63863e06ab}
+\index{uart.\+c@{uart.\+c}!uart\+\_\+init@{uart\+\_\+init}}
+\index{uart\+\_\+init@{uart\+\_\+init}!uart.\+c@{uart.\+c}}
+\subsubsection[{\texorpdfstring{uart\+\_\+init(uint16\+\_\+t baud\+Rate)}{uart_init(uint16_t baudRate)}}]{\setlength{\rightskip}{0pt plus 5cm}void uart\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{baud\+Rate}
+\end{DoxyParamCaption}
+)}\hypertarget{uart_8c_a1d5e43da42875080c736c908189d7417}{}\label{uart_8c_a1d5e43da42875080c736c908189d7417}
+\index{uart.\+c@{uart.\+c}!uart\+\_\+\+Send\+Byte@{uart\+\_\+\+Send\+Byte}}
+\index{uart\+\_\+\+Send\+Byte@{uart\+\_\+\+Send\+Byte}!uart.\+c@{uart.\+c}}
+\subsubsection[{\texorpdfstring{uart\+\_\+\+Send\+Byte(uint8\+\_\+t data)}{uart_SendByte(uint8_t data)}}]{\setlength{\rightskip}{0pt plus 5cm}void uart\+\_\+\+Send\+Byte (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{data}
+\end{DoxyParamCaption}
+)}\hypertarget{uart_8c_ae41130eecf6874b597cefe841db0ae60}{}\label{uart_8c_ae41130eecf6874b597cefe841db0ae60}
+\index{uart.\+c@{uart.\+c}!uart\+\_\+\+Send\+Byte\+Stream@{uart\+\_\+\+Send\+Byte\+Stream}}
+\index{uart\+\_\+\+Send\+Byte\+Stream@{uart\+\_\+\+Send\+Byte\+Stream}!uart.\+c@{uart.\+c}}
+\subsubsection[{\texorpdfstring{uart\+\_\+\+Send\+Byte\+Stream(uint8\+\_\+t data, F\+I\+L\+E $\ast$stream)}{uart_SendByteStream(uint8_t data, FILE *stream)}}]{\setlength{\rightskip}{0pt plus 5cm}void uart\+\_\+\+Send\+Byte\+Stream (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{data, }
+\item[{F\+I\+LE $\ast$}]{stream}
+\end{DoxyParamCaption}
+)}\hypertarget{uart_8c_a1b1176652ce90c89bf8541481d3ba04b}{}\label{uart_8c_a1b1176652ce90c89bf8541481d3ba04b}

@@ -1,0 +1,292 @@
+\hypertarget{can__drv_8c}{}\section{can\+\_\+drv.\+c File Reference}
+\label{can__drv_8c}\index{can\+\_\+drv.\+c@{can\+\_\+drv.\+c}}
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}can\+\_\+drv.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{can__drv_8c_ab057df44a5e3dea2661b0b429730a1aa}{can\+\_\+clear\+\_\+all\+\_\+mob} (void)
+\item 
+uint8\+\_\+t \hyperlink{can__drv_8c_a99a793e524da33da28de3286bc5c0e48}{can\+\_\+get\+\_\+mob\+\_\+free} (void)
+\item 
+uint8\+\_\+t \hyperlink{can__drv_8c_a6f2df23760580211e644a786e5f8fccb}{can\+\_\+get\+\_\+mob\+\_\+status} (void)
+\item 
+void \hyperlink{can__drv_8c_aad3171662b568a0f5fdd7f7cf4ab1ef5}{can\+\_\+get\+\_\+data} (uint8\+\_\+t $\ast$p\+\_\+can\+\_\+message\+\_\+data)
+\item 
+uint8\+\_\+t \hyperlink{can__drv_8c_af1b9f268480cfb4ad9c87efee5e174bb}{can\+\_\+auto\+\_\+baudrate} (uint8\+\_\+t mode)
+\item 
+uint8\+\_\+t \hyperlink{can__drv_8c_a14b3052caf7b06d971c10f418329e302}{can\+\_\+fixed\+\_\+baudrate} (uint8\+\_\+t mode)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{can\+\_\+drv.\+c@{can\+\_\+drv.\+c}!can\+\_\+auto\+\_\+baudrate@{can\+\_\+auto\+\_\+baudrate}}
+\index{can\+\_\+auto\+\_\+baudrate@{can\+\_\+auto\+\_\+baudrate}!can\+\_\+drv.\+c@{can\+\_\+drv.\+c}}
+\subsubsection[{\texorpdfstring{can\+\_\+auto\+\_\+baudrate(uint8\+\_\+t mode)}{can_auto_baudrate(uint8_t mode)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t can\+\_\+auto\+\_\+baudrate (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{can__drv_8c_af1b9f268480cfb4ad9c87efee5e174bb}{}\label{can__drv_8c_af1b9f268480cfb4ad9c87efee5e174bb}
+This function programs itself the C\+A\+N\+B\+Tx registers if there is some communication (activity) on the C\+AN bus.
+
+\begin{DoxyWarning}{Warning}
+complex function not yet implemented
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em Evaluation} & needed ==0\+: start the evaluation from faster baudrate ==1\+: (re)start an evaluation with C\+A\+N\+B\+Tx registers contents\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Baudrate Status ==0\+: research of bit timing configuration failed ==1\+: baudrate performed 
+\end{DoxyReturn}
+Temporary variable
+
+Bit timing segment variables
+
+Computing needed
+
+Keys for \char`\"{}while()\char`\"{} loops
+
+Key for configurate C\+AN
+
+Timer overflow count
+
+Count of bit timing configuration tried
+
+Return flag
+
+--- Default setting
+
+--- Init segment variables with M\+IN values if mode=0 or init segment variables with C\+A\+N\+B\+Tx if mode=1
+
+Try this configuration
+
+Enable \char`\"{}while (wait\+\_\+for\+\_\+rx ...\char`\"{} loop
+
+mode = 1
+
+To enter in \char`\"{}while (evaluate ...\char`\"{} loop
+
+Look for the next configuration
+
+Skip \char`\"{}while (wait\+\_\+for\+\_\+rx ...\char`\"{} loop
+
+--- Clear all M\+Ob\textquotesingle{}s (C\+A\+N\+M\+SG not cleared)
+
+Page index
+
+All M\+Ob Registers = 0x00
+
+--- C\+A\+N\+B\+Tx registers update (sjw = phs2/2, 3 sample points)
+
+--- Set C\+A\+N-\/\+Timer -\/ Used for time-\/out There are 641 (0x281) possible evaluations. The first one provides the faster the faster bit timing, the last one gives the slower. It is necessary to modulate the time-\/out versus bit timing (0x281$>$$>$3=0x50, matching an U8).
+
+--- M\+Ob configuration
+
+Use M\+Ob-\/0
+
+Reset M\+Ob status (undone by \char`\"{}\+Can\+\_\+reset()\char`\"{})
+
+M\+Ob 0 in receive mode
+
+C\+AN controller configuration
+
+Enable C\+AN controller in \char`\"{}listen\char`\"{} mode
+
+Wait for Enable OK
+
+Reset General errors and O\+V\+R\+T\+IM flag
+
+\subsection*{--- W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+RX L\+O\+OP\+: }
+
+Try to perform a C\+AN message reception in \char`\"{}\+L\+I\+S\+T\+E\+N\char`\"{} mode without error and before a time\+\_\+out done by C\+A\+N-\/\+Timer. Else gives the hand to \char`\"{}\+E\+V\+A\+L\+U\+A\+T\+E L\+O\+O\+P\char`\"{} to have a new set of bit timing.
+
+--- Rx\+OK received ?
+
+--- It is the successful output of \char`\"{}can\+\_\+auto\+\_\+baudrate\char`\"{} function
+
+Out of \char`\"{}while (wait\+\_\+for\+\_\+rx ...\char`\"{} loop
+
+Will skip \char`\"{}while (evaluate ...\char`\"{} loop
+
+Out of \char`\"{}while (bt\+\_\+not\+\_\+found ...\char`\"{} loop
+
+Return flag = T\+R\+UE
+
+Disable M\+Ob-\/0
+
+Disable C\+AN controller \& reset \char`\"{}listen\char`\"{} mode
+
+Wait for Disable OK
+
+--- Else stop if any errors
+
+--- M\+Ob error ?
+
+Will enter in \char`\"{}while (evaluate ...\char`\"{} loop
+
+Out of \char`\"{}while (wait\+\_\+for\+\_\+rx ...\char`\"{} loop
+
+--- Time\+\_\+out reached ?
+
+--- First Time\+\_\+out
+
+--- Second Time\+\_\+out
+
+Will enter in \char`\"{}while (evaluate ...\char`\"{} loop
+
+Out of \char`\"{}while (wait\+\_\+for\+\_\+rx ...\char`\"{} loop
+
+--- General error ?
+
+Will enter in \char`\"{}while (evaluate ...\char`\"{} loop
+
+Out of \char`\"{}while (wait\+\_\+for\+\_\+rx ...\char`\"{} loop
+
+Try this configuration
+
+\subsection*{--- E\+V\+A\+L\+U\+A\+TE L\+O\+OP\+: }
+
+Compute a new bit timing configuration. First, Phase 1 is increased, then Phase2=Phase1 and if Phase1$>$5, Phase1 can be equal to Phase2 or Phase2+1. After this, the number of TQ is increased up to its high limit and after it is the Prescaler. During the computing high (80\%) and low (75\%) limits of sampling point location are tested. S\+JW and the number of sampling points are not calculated in this loop.
+
+--- It is the failing of \char`\"{}can\+\_\+auto\+\_\+baudrate\char`\"{} function
+
+Out of \char`\"{}while (evaluate ...\char`\"{} loop
+
+Return flag = F\+A\+L\+SE
+
+Out of \char`\"{}while (bt\+\_\+not\+\_\+found ...\char`\"{} loop
+
+Disable M\+Ob-\/0
+
+Disable C\+AN controller \& reset \char`\"{}listen\char`\"{} mode
+
+Wait for Disable OK
+
+--- If psh1 $>$ 5 then phs1 =phs2 or =phs2+1, else phs1=phs2
+
+--- Test P\+RS limits
+
+--- Values accepted if 80\% $>$= sampling point $>$= 75\%
+
+Out of \char`\"{}while (evaluate ...\char`\"{} loop \&
+
+new \char`\"{}while (bt\+\_\+not\+\_\+found ...\char`\"{} loop \index{can\+\_\+drv.\+c@{can\+\_\+drv.\+c}!can\+\_\+clear\+\_\+all\+\_\+mob@{can\+\_\+clear\+\_\+all\+\_\+mob}}
+\index{can\+\_\+clear\+\_\+all\+\_\+mob@{can\+\_\+clear\+\_\+all\+\_\+mob}!can\+\_\+drv.\+c@{can\+\_\+drv.\+c}}
+\subsubsection[{\texorpdfstring{can\+\_\+clear\+\_\+all\+\_\+mob(void)}{can_clear_all_mob(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void can\+\_\+clear\+\_\+all\+\_\+mob (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{can__drv_8c_ab057df44a5e3dea2661b0b429730a1aa}{}\label{can__drv_8c_ab057df44a5e3dea2661b0b429730a1aa}
+This function clears the Mailbox content. It reset C\+A\+N\+S\+T\+M\+OB, C\+A\+N\+C\+D\+M\+OB, C\+A\+N\+I\+D\+Tx \& C\+A\+N\+I\+D\+Mx and clears data F\+I\+FO of M\+Ob\mbox{[}0\mbox{]} upto M\+Ob\mbox{[}L\+A\+S\+T\+\_\+\+M\+O\+B\+\_\+\+NB\mbox{]}.
+
+\begin{DoxyWarning}{Warning}
+\+: This version doesn\textquotesingle{}t clears the data F\+I\+FO
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Page index
+
+All M\+Ob Registers=0 \index{can\+\_\+drv.\+c@{can\+\_\+drv.\+c}!can\+\_\+fixed\+\_\+baudrate@{can\+\_\+fixed\+\_\+baudrate}}
+\index{can\+\_\+fixed\+\_\+baudrate@{can\+\_\+fixed\+\_\+baudrate}!can\+\_\+drv.\+c@{can\+\_\+drv.\+c}}
+\subsubsection[{\texorpdfstring{can\+\_\+fixed\+\_\+baudrate(uint8\+\_\+t mode)}{can_fixed_baudrate(uint8_t mode)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t can\+\_\+fixed\+\_\+baudrate (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{can__drv_8c_a14b3052caf7b06d971c10f418329e302}{}\label{can__drv_8c_a14b3052caf7b06d971c10f418329e302}
+This function programs the C\+A\+N\+B\+Tx registers with the predefined values C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T1, C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T2, C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T3.
+
+\begin{DoxyWarning}{Warning}
+
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em (unused!)} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Baudrate Status fixed = 1\+: baudrate performed 
+\end{DoxyReturn}
+\index{can\+\_\+drv.\+c@{can\+\_\+drv.\+c}!can\+\_\+get\+\_\+data@{can\+\_\+get\+\_\+data}}
+\index{can\+\_\+get\+\_\+data@{can\+\_\+get\+\_\+data}!can\+\_\+drv.\+c@{can\+\_\+drv.\+c}}
+\subsubsection[{\texorpdfstring{can\+\_\+get\+\_\+data(uint8\+\_\+t $\ast$p\+\_\+can\+\_\+message\+\_\+data)}{can_get_data(uint8_t *p_can_message_data)}}]{\setlength{\rightskip}{0pt plus 5cm}void can\+\_\+get\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{p\+\_\+can\+\_\+message\+\_\+data}
+\end{DoxyParamCaption}
+)}\hypertarget{can__drv_8c_aad3171662b568a0f5fdd7f7cf4ab1ef5}{}\label{can__drv_8c_aad3171662b568a0f5fdd7f7cf4ab1ef5}
+This function copy the data from the selected M\+Ob to the address passed as parameter.
+
+\begin{DoxyWarning}{Warning}
+none.
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em C\+AN} & message data address.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\index{can\+\_\+drv.\+c@{can\+\_\+drv.\+c}!can\+\_\+get\+\_\+mob\+\_\+free@{can\+\_\+get\+\_\+mob\+\_\+free}}
+\index{can\+\_\+get\+\_\+mob\+\_\+free@{can\+\_\+get\+\_\+mob\+\_\+free}!can\+\_\+drv.\+c@{can\+\_\+drv.\+c}}
+\subsubsection[{\texorpdfstring{can\+\_\+get\+\_\+mob\+\_\+free(void)}{can_get_mob_free(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t can\+\_\+get\+\_\+mob\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{can__drv_8c_a99a793e524da33da28de3286bc5c0e48}{}\label{can__drv_8c_a99a793e524da33da28de3286bc5c0e48}
+This function returns the number of the first M\+Ob available or 0x\+FF if no M\+Ob is available.
+
+\begin{DoxyWarning}{Warning}
+none.
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em none.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Handle of M\+Ob.
+\begin{DoxyItemize}
+\item M\+Ob\mbox{[}0\mbox{]} upto M\+Ob\mbox{[}L\+A\+S\+T\+\_\+\+M\+O\+B\+\_\+\+NB\mbox{]}
+\item 0x\+FF if no M\+Ob 
+\end{DoxyItemize}
+\end{DoxyReturn}
+Disable configuration \index{can\+\_\+drv.\+c@{can\+\_\+drv.\+c}!can\+\_\+get\+\_\+mob\+\_\+status@{can\+\_\+get\+\_\+mob\+\_\+status}}
+\index{can\+\_\+get\+\_\+mob\+\_\+status@{can\+\_\+get\+\_\+mob\+\_\+status}!can\+\_\+drv.\+c@{can\+\_\+drv.\+c}}
+\subsubsection[{\texorpdfstring{can\+\_\+get\+\_\+mob\+\_\+status(void)}{can_get_mob_status(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t can\+\_\+get\+\_\+mob\+\_\+status (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{can__drv_8c_a6f2df23760580211e644a786e5f8fccb}{}\label{can__drv_8c_a6f2df23760580211e644a786e5f8fccb}
+This function returns information \char`\"{}\+M\+O\+B completed its job\char`\"{} if one of the R\+X\+OK or T\+X\+OK Flag is set or "M\+OB not completed its job if no R\+X\+OK and T\+X\+OK flags are set. Previously, this function checks if the M\+Ob is configured or not and in case of the M\+OB not configured, the function returns \char`\"{}\+M\+O\+B\+\_\+\+D\+I\+S\+A\+B\+L\+E\char`\"{}.
+
+\begin{DoxyWarning}{Warning}
+none.
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em none.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+Ob Status.
+\begin{DoxyItemize}
+\item M\+O\+B\+\_\+\+N\+O\+T\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED
+\item M\+O\+B\+\_\+\+T\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED
+\item M\+O\+B\+\_\+\+R\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED
+\item M\+O\+B\+\_\+\+R\+X\+\_\+\+D\+L\+C\+\_\+\+W\+A\+R\+N\+I\+NG
+\item M\+O\+B\+\_\+\+D\+I\+S\+A\+B\+LE or should be a combination of the following errors
+\item M\+O\+B\+\_\+\+A\+C\+K\+\_\+\+E\+R\+R\+OR
+\item M\+O\+B\+\_\+\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR
+\item M\+O\+B\+\_\+\+C\+R\+C\+\_\+\+E\+R\+R\+OR
+\item M\+O\+B\+\_\+\+S\+T\+U\+F\+F\+\_\+\+E\+R\+R\+OR
+\item M\+O\+B\+\_\+\+B\+I\+T\+\_\+\+E\+R\+R\+OR 
+\end{DoxyItemize}
+\end{DoxyReturn}

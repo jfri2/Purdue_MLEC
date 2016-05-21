@@ -1,0 +1,1129 @@
+\hypertarget{can__drv_8h}{}\section{can\+\_\+drv.\+h File Reference}
+\label{can__drv_8h}\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{can__drv_8h_a82238ecafc234f26ef0d3eefa42c4573}{C\+A\+N\+\_\+\+A\+U\+T\+O\+B\+A\+UD}~0
+\item 
+\#define \hyperlink{can__drv_8h_ab05110db654464e4cec33dfeb1e2db5a}{C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T1}~0x02
+\begin{DoxyCompactList}\small\item\em $<$ Fclkio = 16 M\+Hz, Tclkio = 62.\+5 ns \end{DoxyCompactList}\item 
+\#define \hyperlink{can__drv_8h_afc2b07b57b39c35cc99a0a33303bc610}{C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T2}~0x04
+\item 
+\#define \hyperlink{can__drv_8h_a5acd623fc47dd79cdf22d7e384872132}{C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T3}~0x13
+\item 
+\#define \hyperlink{can__drv_8h_aa1e1b24aef2cb1dad4e4bb29c98fa722}{Can\+\_\+bit\+\_\+timing}(mode)~(\hyperlink{can__drv_8h_ad18c9a425ec3655833b260f1c6213969}{can\+\_\+fixed\+\_\+baudrate}(mode))
+\item 
+\#define \hyperlink{can__drv_8h_a9a98e5bc51eab0a3e183a737f6447a9f}{C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+IN}~P\+I\+NC
+\item 
+\#define \hyperlink{can__drv_8h_ac584aea798b5df01f89d48e437a810f6}{C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+D\+IR}~D\+D\+RC
+\item 
+\#define \hyperlink{can__drv_8h_ab85845f8c8873351c9604e5a5411bfd9}{C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+O\+UT}~P\+O\+R\+TC
+\item 
+\#define \hyperlink{can__drv_8h_a4c55cfaffbcb1a4fa35ae5350a83d5a8}{C\+A\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+P\+IN}~3
+\item 
+\#define \hyperlink{can__drv_8h_a87eeb0af4b7ef222375f95ae1036d1d7}{C\+A\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+IN}~2
+\item 
+\#define \hyperlink{can__drv_8h_ad6cb556c3426a0e2f0e68185c1724011}{E\+R\+R\+\_\+\+G\+E\+N\+\_\+\+M\+SK}~((1$<$$<$S\+E\+RG)$\vert$(1$<$$<$C\+E\+RG)$\vert$(1$<$$<$F\+E\+RG)$\vert$(1$<$$<$A\+E\+RG))
+\item 
+\#define \hyperlink{can__drv_8h_a9acc9a282f36f4770961c07555dd1a92}{I\+N\+T\+\_\+\+G\+E\+N\+\_\+\+M\+SK}~((1$<$$<$B\+O\+F\+F\+IT)$\vert$(1$<$$<$B\+X\+OK)$\vert$(\hyperlink{can__drv_8h_ad6cb556c3426a0e2f0e68185c1724011}{E\+R\+R\+\_\+\+G\+E\+N\+\_\+\+M\+SK}))
+\item 
+\#define \hyperlink{can__drv_8h_add3e981e0215ec91a65135e2861bfb9c}{B\+R\+P\+\_\+\+M\+SK}~((1$<$$<$B\+R\+P5)$\vert$(1$<$$<$B\+R\+P4)$\vert$(1$<$$<$B\+R\+P3)$\vert$(1$<$$<$B\+R\+P2)$\vert$(1$<$$<$B\+R\+P1)$\vert$(1$<$$<$B\+R\+P0))
+\item 
+\#define \hyperlink{can__drv_8h_a83d41a9956853eefcdd06e998bb8d161}{S\+J\+W\+\_\+\+M\+SK}~((1$<$$<$S\+J\+W1)$\vert$(1$<$$<$S\+J\+W0))
+\item 
+\#define \hyperlink{can__drv_8h_ac45ed4d130f51df054c7918732fce2aa}{P\+R\+S\+\_\+\+M\+SK}~((1$<$$<$P\+R\+S2)$\vert$(1$<$$<$P\+R\+S1)$\vert$(1$<$$<$P\+R\+S0))
+\item 
+\#define \hyperlink{can__drv_8h_a7b9077126e5b4e4b5f05378cc127880d}{P\+H\+S2\+\_\+\+M\+SK}~((1$<$$<$P\+H\+S22)$\vert$(1$<$$<$P\+H\+S21)$\vert$(1$<$$<$P\+H\+S20))
+\item 
+\#define \hyperlink{can__drv_8h_a659e017cdd8ddcd01c0793a3d49afd89}{P\+H\+S1\+\_\+\+M\+SK}~((1$<$$<$P\+H\+S12)$\vert$(1$<$$<$P\+H\+S11)$\vert$(1$<$$<$P\+H\+S10))
+\item 
+\#define \hyperlink{can__drv_8h_a7ebc1a9bb3b1ecc2525f0cc11d257599}{B\+RP}~(B\+R\+P0)
+\item 
+\#define \hyperlink{can__drv_8h_a2d7ea218e18cf936afd6b11ea0478913}{S\+JW}~(S\+J\+W0)
+\item 
+\#define \hyperlink{can__drv_8h_a8397acedb06c1832f583d8660807e826}{P\+RS}~(P\+R\+S0)
+\item 
+\#define \hyperlink{can__drv_8h_a80eef39659fcd797fde32bfe561fdacc}{P\+H\+S2}~(P\+H\+S20)
+\item 
+\#define \hyperlink{can__drv_8h_a6df9b6fcdca37119366e0e8edf56da21}{P\+H\+S1}~(P\+H\+S10)
+\item 
+\#define \hyperlink{can__drv_8h_afef4c68019ab8ff0d493076a1975d72e}{H\+P\+M\+O\+B\+\_\+\+M\+SK}~((1$<$$<$H\+P\+M\+O\+B3)$\vert$(1$<$$<$H\+P\+M\+O\+B2)$\vert$(1$<$$<$H\+P\+M\+O\+B1)$\vert$(1$<$$<$H\+P\+M\+O\+B0))
+\item 
+\#define \hyperlink{can__drv_8h_ad579957283d2c1a95a7bb74f2505032c}{M\+O\+B\+N\+B\+\_\+\+M\+SK}~((1$<$$<$M\+O\+B\+N\+B3)$\vert$(1$<$$<$M\+O\+B\+N\+B2)$\vert$(1$<$$<$M\+O\+B\+N\+B1)$\vert$(1$<$$<$M\+O\+B\+N\+B0))
+\item 
+\#define \hyperlink{can__drv_8h_ad593d845ece9bc5e01003523bdedb861}{E\+R\+R\+\_\+\+M\+O\+B\+\_\+\+M\+SK}~((1$<$$<$B\+E\+RR)$\vert$(1$<$$<$S\+E\+RR)$\vert$(1$<$$<$C\+E\+RR)$\vert$(1$<$$<$F\+E\+RR)$\vert$(1$<$$<$A\+E\+RR))
+\item 
+\#define \hyperlink{can__drv_8h_a015a90b10f6e6c9a59d0012d40fcc18a}{I\+N\+T\+\_\+\+M\+O\+B\+\_\+\+M\+SK}~((1$<$$<$T\+X\+OK)$\vert$(1$<$$<$R\+X\+OK)$\vert$(1$<$$<$B\+E\+RR)$\vert$(1$<$$<$S\+E\+RR)$\vert$(1$<$$<$C\+E\+RR)$\vert$(1$<$$<$F\+E\+RR)$\vert$(1$<$$<$A\+E\+RR))
+\item 
+\#define \hyperlink{can__drv_8h_aecd3014a798c8632cb336f039d255093}{C\+O\+N\+M\+O\+B\+\_\+\+M\+SK}~((1$<$$<$C\+O\+N\+M\+O\+B1)$\vert$(1$<$$<$C\+O\+N\+M\+O\+B0))
+\item 
+\#define \hyperlink{can__drv_8h_a8d6d05c1f8a155012276ab5cf4287c17}{D\+L\+C\+\_\+\+M\+SK}~((1$<$$<$D\+L\+C3)$\vert$(1$<$$<$D\+L\+C2)$\vert$(1$<$$<$D\+L\+C1)$\vert$(1$<$$<$D\+L\+C0))
+\item 
+\#define \hyperlink{can__drv_8h_accf884871de3bbbbfbcaceac9fe6246e}{C\+O\+N\+M\+OB}~(C\+O\+N\+M\+O\+B0)
+\item 
+\#define \hyperlink{can__drv_8h_a3a701690309f7a22fabc465efee30c17}{D\+LC}~(D\+L\+C0)
+\item 
+\#define \hyperlink{can__drv_8h_a127256c7d2a15068e45dde85055fc62d}{B\+R\+P\+\_\+\+M\+IN}~1
+\item 
+\#define \hyperlink{can__drv_8h_a3102cac1069dfc36d96c9742dffb58b0}{B\+R\+P\+\_\+\+M\+AX}~64
+\item 
+\#define \hyperlink{can__drv_8h_adc2d9a7f940621aeda85e4c9c0653e6b}{N\+T\+Q\+\_\+\+M\+IN}~8
+\item 
+\#define \hyperlink{can__drv_8h_ad66de91845a9527d792e940d56679c37}{N\+T\+Q\+\_\+\+M\+AX}~25
+\item 
+\#define \hyperlink{can__drv_8h_a74ec0e95334cc33f8518a5c412200994}{P\+R\+S\+\_\+\+M\+IN}~1
+\begin{DoxyCompactList}\small\item\em True segment values in TQ. \end{DoxyCompactList}\item 
+\#define \hyperlink{can__drv_8h_a6ba0bad4a3a447e01277aa0a0278b5c7}{P\+R\+S\+\_\+\+M\+AX}~8
+\item 
+\#define \hyperlink{can__drv_8h_a76a9058a75b89db1f8757cb0f7da8c98}{P\+H\+S1\+\_\+\+M\+IN}~2
+\item 
+\#define \hyperlink{can__drv_8h_a4399a478e1e3f618647499408a3a0ab6}{P\+H\+S1\+\_\+\+M\+AX}~8
+\item 
+\#define \hyperlink{can__drv_8h_a4135e9fc31e32a4c2fff23e10ebd32fc}{P\+H\+S2\+\_\+\+M\+IN}~2
+\item 
+\#define \hyperlink{can__drv_8h_ae6625573c5aa592a5c4cea9aaa1e5d3a}{P\+H\+S2\+\_\+\+M\+AX}~8
+\item 
+\#define \hyperlink{can__drv_8h_a0187cf5872d395128527ebb5767493f4}{S\+J\+W\+\_\+\+M\+IN}~1
+\item 
+\#define \hyperlink{can__drv_8h_ae9d138cf098144036263c3a83bcd234f}{S\+J\+W\+\_\+\+M\+AX}~4
+\item 
+\#define \hyperlink{can__drv_8h_a27155aadcdf8ed5c0d1fa24a463063f1}{N\+B\+\_\+\+M\+OB}~6
+\item 
+\#define \hyperlink{can__drv_8h_ae0293a7870f16cf76ee18327d125c548}{N\+B\+\_\+\+D\+A\+T\+A\+\_\+\+M\+AX}~8
+\item 
+\#define \hyperlink{can__drv_8h_ab51fad1d3591bcde28a34d8580bfddc5}{L\+A\+S\+T\+\_\+\+M\+O\+B\+\_\+\+NB}~(\hyperlink{can__drv_8h_a27155aadcdf8ed5c0d1fa24a463063f1}{N\+B\+\_\+\+M\+OB}-\/1)
+\item 
+\#define \hyperlink{can__drv_8h_a6b5e49634f5bf3b2aeeb57f3c187833d}{N\+O\+\_\+\+M\+OB}~0x\+FF
+\item 
+\#define \hyperlink{can__drv_8h_ac6dc80303c26062de916959ca5a76a4f}{S\+T\+A\+T\+U\+S\+\_\+\+C\+L\+E\+A\+R\+ED}~0x00
+\item 
+\#define \hyperlink{can__drv_8h_ab95ceea45b8f637755a869fb36c7d386}{M\+O\+B\+\_\+\+N\+O\+T\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED}~0x00
+\item 
+\#define \hyperlink{can__drv_8h_a9b1b6e37b832481356a9697ee6d46564}{M\+O\+B\+\_\+\+T\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED}~(1$<$$<$T\+X\+OK)
+\item 
+\#define \hyperlink{can__drv_8h_a5cc2b3c03d079a4ca8722e8aeeee2cae}{M\+O\+B\+\_\+\+R\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED}~(1$<$$<$R\+X\+OK)
+\item 
+\#define \hyperlink{can__drv_8h_a75c13478f7bf4172a67d2c40f93b5507}{M\+O\+B\+\_\+\+R\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+D\+L\+CW}~((1$<$$<$R\+X\+OK)$\vert$(1$<$$<$D\+L\+CW))
+\item 
+\#define \hyperlink{can__drv_8h_af52b9555787686c7143879d86f12811b}{M\+O\+B\+\_\+\+A\+C\+K\+\_\+\+E\+R\+R\+OR}~(1$<$$<$A\+E\+RR)
+\item 
+\#define \hyperlink{can__drv_8h_ab0fd76214f7907d4674b10cb39031197}{M\+O\+B\+\_\+\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR}~(1$<$$<$F\+E\+RR)
+\item 
+\#define \hyperlink{can__drv_8h_ac788511a4773e1a74a8e0155022151a5}{M\+O\+B\+\_\+\+C\+R\+C\+\_\+\+E\+R\+R\+OR}~(1$<$$<$C\+E\+RR)
+\item 
+\#define \hyperlink{can__drv_8h_af011564b3b88bd8f11e3ed571bfb78c9}{M\+O\+B\+\_\+\+S\+T\+U\+F\+F\+\_\+\+E\+R\+R\+OR}~(1$<$$<$S\+E\+RR)
+\item 
+\#define \hyperlink{can__drv_8h_a620bef0657f3212d24ef83c0568284c3}{M\+O\+B\+\_\+\+B\+I\+T\+\_\+\+E\+R\+R\+OR}~(1$<$$<$B\+E\+RR)
+\item 
+\#define \hyperlink{can__drv_8h_a1818f3ec3fc6435c38114598ceae1cd3}{M\+O\+B\+\_\+\+P\+E\+N\+D\+I\+NG}~((1$<$$<$R\+X\+OK)$\vert$(1$<$$<$T\+X\+OK))
+\item 
+\#define \hyperlink{can__drv_8h_a1d5700e77a20da7ea548c68f4710da15}{M\+O\+B\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+C\+H\+ED}~((1$<$$<$A\+E\+RR)$\vert$(1$<$$<$F\+E\+RR)$\vert$(1$<$$<$C\+E\+RR)$\vert$(1$<$$<$S\+E\+RR)$\vert$(1$<$$<$B\+E\+RR))
+\item 
+\#define \hyperlink{can__drv_8h_a2a2e3b4caa9d8ea5fb582090bf8f4233}{M\+O\+B\+\_\+\+D\+I\+S\+A\+B\+LE}~0x\+FF
+\item 
+\#define \hyperlink{can__drv_8h_ac8951e65f8e3fc0b571909eac77f7459}{M\+O\+B\+\_\+\+Tx\+\_\+\+E\+NA}~1
+\item 
+\#define \hyperlink{can__drv_8h_a05ffc172688ca50cef457f5c84c41829}{M\+O\+B\+\_\+\+Rx\+\_\+\+E\+NA}~2
+\item 
+\#define \hyperlink{can__drv_8h_a3cac1d5afc24546cb42550ac92c1922c}{M\+O\+B\+\_\+\+Rx\+\_\+\+B\+E\+NA}~3
+\item 
+\#define \hyperlink{can__drv_8h_a6137125f3f2a2674bdfc2d4c6a417737}{Can\+\_\+reset}()          ~( C\+A\+N\+G\+C\+ON  =  (1$<$$<$S\+W\+R\+ES) )
+\item 
+\#define \hyperlink{can__drv_8h_aeb0b368e9e5a3c0e619a86b577db9e0a}{Can\+\_\+enable}()        ~( C\+A\+N\+G\+C\+ON $\vert$=  (1$<$$<$E\+N\+A\+S\+TB))
+\item 
+\#define \hyperlink{can__drv_8h_a60a04b5268983834db3bbf757034d41d}{Can\+\_\+disable}()      ~( C\+A\+N\+G\+C\+ON \&= $\sim$(1$<$$<$E\+N\+A\+S\+TB))
+\item 
+\#define \hyperlink{can__drv_8h_aa5094f1885ef4038019d4b76f163ccbc}{Can\+\_\+full\+\_\+abort}()~\{ C\+A\+N\+G\+C\+ON $\vert$=  (1$<$$<$A\+B\+RQ); C\+A\+N\+G\+C\+ON \&= $\sim$(1$<$$<$A\+B\+RQ); \}
+\item 
+\#define \hyperlink{can__drv_8h_a84886d8d1c1abda71913ad4eec576497}{Can\+\_\+conf\+\_\+bt}()      ~\{ C\+A\+N\+B\+T1=\hyperlink{can__drv_8h_ab05110db654464e4cec33dfeb1e2db5a}{C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T1}; C\+A\+N\+B\+T2=\hyperlink{can__drv_8h_afc2b07b57b39c35cc99a0a33303bc610}{C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T2}; C\+A\+N\+B\+T3=\hyperlink{can__drv_8h_a5acd623fc47dd79cdf22d7e384872132}{C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T3}; \}
+\item 
+\#define \hyperlink{can__drv_8h_ac270dbdff32dfd1e232f4f6a23bdbebb}{Can\+\_\+set\+\_\+mob}(mob)          ~\{ C\+A\+N\+P\+A\+GE = ((mob) $<$$<$ 4);\}
+\item 
+\#define \hyperlink{can__drv_8h_a4f541b0191fcb521298a7289a09d5fa0}{Can\+\_\+set\+\_\+mask\+\_\+mob}()      ~\{  C\+A\+N\+I\+D\+M4=0x\+F\+F; C\+A\+N\+I\+D\+M3=0x\+F\+F; C\+A\+N\+I\+D\+M2=0x\+F\+F; C\+A\+N\+I\+D\+M1=0x\+F\+F; \}
+\item 
+\#define \hyperlink{can__drv_8h_a7192ceaca07e41b8361c406054ee15e5}{Can\+\_\+clear\+\_\+mask\+\_\+mob}()  ~\{  C\+A\+N\+I\+D\+M4=0x00; C\+A\+N\+I\+D\+M3=0x00; C\+A\+N\+I\+D\+M2=0x00; C\+A\+N\+I\+D\+M1=0x00; \}
+\item 
+\#define \hyperlink{can__drv_8h_af0cea6d1b91d365388db689f8d566ee4}{Can\+\_\+clear\+\_\+status\+\_\+mob}()~\{ C\+A\+N\+S\+T\+M\+OB=0x00; \}
+\item 
+\#define \hyperlink{can__drv_8h_a2a8afc214c9e25a420b75ac5a686530d}{Can\+\_\+clear\+\_\+mob}()            ~\{ uint8\+\_\+t  volatile $\ast$\+\_\+\+\_\+i\+\_\+; for (\+\_\+\+\_\+i\+\_\+=\&C\+A\+N\+S\+T\+M\+OB; \+\_\+\+\_\+i\+\_\+$<$\&C\+A\+N\+S\+T\+ML; \+\_\+\+\_\+i\+\_\+++) \{ $\ast$\+\_\+\+\_\+i\+\_\+=0x00 ;\}\}
+\item 
+\#define \hyperlink{can__drv_8h_a4ee8435c169285bcf605855f76fff4d3}{Can\+\_\+mob\+\_\+abort}()  ~( \hyperlink{can__drv_8h_ac4ba11db63ce1f27aea62bb68fbdcab7}{D\+I\+S\+A\+B\+L\+E\+\_\+\+M\+OB} )
+\item 
+\#define \hyperlink{can__drv_8h_ab3d86a91b9ba68a3e729b139286e2fa7}{Can\+\_\+set\+\_\+dlc}(dlc)~( C\+A\+N\+C\+D\+M\+OB $\vert$= (dlc)        )
+\item 
+\#define \hyperlink{can__drv_8h_ae1c390a2afbc044f56af9deedb5dcebd}{Can\+\_\+set\+\_\+ide}()      ~( C\+A\+N\+C\+D\+M\+OB $\vert$= (1$<$$<$I\+DE)     )
+\item 
+\#define \hyperlink{can__drv_8h_a5dfbffd54165bc12eba5d13cee1c97dc}{Can\+\_\+set\+\_\+rtr}()      ~( C\+A\+N\+I\+D\+T4  $\vert$= (1$<$$<$R\+T\+R\+T\+AG)  )
+\item 
+\#define \hyperlink{can__drv_8h_a345dab61e199902a9d6d76308c6fa787}{Can\+\_\+set\+\_\+rplv}()    ~( C\+A\+N\+C\+D\+M\+OB $\vert$= (1$<$$<$R\+P\+LV)    )
+\item 
+\#define \hyperlink{can__drv_8h_a7e710ee4358a9b95f0420c2c42b65845}{Can\+\_\+clear\+\_\+dlc}()  ~( C\+A\+N\+C\+D\+M\+OB \&= $\sim$\hyperlink{can__drv_8h_a8d6d05c1f8a155012276ab5cf4287c17}{D\+L\+C\+\_\+\+M\+SK}     )
+\item 
+\#define \hyperlink{can__drv_8h_ad9e8600e8a20215b17618b5e79ec1145}{Can\+\_\+clear\+\_\+ide}()  ~( C\+A\+N\+C\+D\+M\+OB \&= $\sim$(1$<$$<$I\+DE)    )
+\item 
+\#define \hyperlink{can__drv_8h_aca46a72377e10dbee45b290eed452385}{Can\+\_\+clear\+\_\+rtr}()  ~( C\+A\+N\+I\+D\+T4  \&= $\sim$(1$<$$<$R\+T\+R\+T\+AG) )
+\item 
+\#define \hyperlink{can__drv_8h_a55b6d2c5a05cec34fcad7b0e8faa549e}{Can\+\_\+clear\+\_\+rplv}()~( C\+A\+N\+C\+D\+M\+OB \&= $\sim$(1$<$$<$R\+P\+LV)   )
+\item 
+\#define \hyperlink{can__drv_8h_ac4ba11db63ce1f27aea62bb68fbdcab7}{D\+I\+S\+A\+B\+L\+E\+\_\+\+M\+OB}~( C\+A\+N\+C\+D\+M\+OB \&= ($\sim$\hyperlink{can__drv_8h_aecd3014a798c8632cb336f039d255093}{C\+O\+N\+M\+O\+B\+\_\+\+M\+SK}) )
+\item 
+\#define \hyperlink{can__drv_8h_aa08432faaa061f11560ac5071894e6e8}{Can\+\_\+config\+\_\+tx}()            ~\{ \hyperlink{can__drv_8h_ac4ba11db63ce1f27aea62bb68fbdcab7}{D\+I\+S\+A\+B\+L\+E\+\_\+\+M\+OB}; C\+A\+N\+C\+D\+M\+OB $\vert$= (\hyperlink{can__drv_8h_ac8951e65f8e3fc0b571909eac77f7459}{M\+O\+B\+\_\+\+Tx\+\_\+\+E\+NA}  $<$$<$ \hyperlink{can__drv_8h_accf884871de3bbbbfbcaceac9fe6246e}{C\+O\+N\+M\+OB}); \}
+\item 
+\#define \hyperlink{can__drv_8h_a7a82ffc686cae97f5caedc5c8835260d}{Can\+\_\+config\+\_\+rx}()            ~\{ \hyperlink{can__drv_8h_ac4ba11db63ce1f27aea62bb68fbdcab7}{D\+I\+S\+A\+B\+L\+E\+\_\+\+M\+OB}; C\+A\+N\+C\+D\+M\+OB $\vert$= (\hyperlink{can__drv_8h_a05ffc172688ca50cef457f5c84c41829}{M\+O\+B\+\_\+\+Rx\+\_\+\+E\+NA}  $<$$<$ \hyperlink{can__drv_8h_accf884871de3bbbbfbcaceac9fe6246e}{C\+O\+N\+M\+OB}); \}
+\item 
+\#define \hyperlink{can__drv_8h_ada08a4a12c92db2d9418b19988ad6935}{Can\+\_\+config\+\_\+rx\+\_\+buffer}()~\{              C\+A\+N\+C\+D\+M\+OB $\vert$= (\hyperlink{can__drv_8h_a3cac1d5afc24546cb42550ac92c1922c}{M\+O\+B\+\_\+\+Rx\+\_\+\+B\+E\+NA} $<$$<$ \hyperlink{can__drv_8h_accf884871de3bbbbfbcaceac9fe6246e}{C\+O\+N\+M\+OB}); \}
+\item 
+\#define \hyperlink{can__drv_8h_acfc3c45d4d31bb2562a3bab66dfa23d5}{Can\+\_\+get\+\_\+dlc}()        ~((C\+A\+N\+C\+D\+M\+OB \&  \hyperlink{can__drv_8h_a8d6d05c1f8a155012276ab5cf4287c17}{D\+L\+C\+\_\+\+M\+SK})     $>$$>$ \hyperlink{can__drv_8h_a3a701690309f7a22fabc465efee30c17}{D\+LC}   )
+\item 
+\#define \hyperlink{can__drv_8h_a0ec7e96951dc660d66d6ab79c89f6230}{Can\+\_\+get\+\_\+ide}()        ~((C\+A\+N\+C\+D\+M\+OB \&  (1$<$$<$I\+DE))    $>$$>$ I\+DE   )
+\item 
+\#define \hyperlink{can__drv_8h_a548f0895b513b7904548a014f3ac0cbf}{Can\+\_\+get\+\_\+rtr}()        ~((C\+A\+N\+I\+D\+T4  \&  (1$<$$<$R\+T\+R\+T\+AG)) $>$$>$ R\+T\+R\+T\+AG)
+\item 
+\#define \hyperlink{can__drv_8h_a09345b71e39ffe032e0f74ff0361d256}{Can\+\_\+set\+\_\+rtrmsk}()  ~( C\+A\+N\+I\+D\+M4 $\vert$= (1$<$$<$R\+T\+R\+M\+SK) )
+\item 
+\#define \hyperlink{can__drv_8h_aa1ea2807860f194c240a6a6574a698d9}{Can\+\_\+set\+\_\+idemsk}()  ~( C\+A\+N\+I\+D\+M4 $\vert$= (1$<$$<$I\+D\+E\+M\+SK) )
+\item 
+\#define \hyperlink{can__drv_8h_af1fe0f5e57f57ba8fadaa89204f34ab0}{Can\+\_\+clear\+\_\+rtrmsk}()~( C\+A\+N\+I\+D\+M4 \&= $\sim$(1$<$$<$R\+T\+R\+M\+SK) )
+\item 
+\#define \hyperlink{can__drv_8h_aa8dda92f97b92bb19bace216a9166013}{Can\+\_\+clear\+\_\+idemsk}()~( C\+A\+N\+I\+D\+M4 \&= $\sim$(1$<$$<$I\+D\+E\+M\+SK) )
+\item 
+\#define \hyperlink{can__drv_8h_a176e377a71762bdf4665c1d70509d3ee}{Can\+\_\+get\+\_\+std\+\_\+id}(identifier)
+\begin{DoxyCompactList}\small\item\em $<$ S\+TD ID T\+AG Reading \end{DoxyCompactList}\item 
+\#define \hyperlink{can__drv_8h_a4276228ae1364d0a2d4d6fbbafd2e79f}{Can\+\_\+get\+\_\+ext\+\_\+id}(identifier)
+\begin{DoxyCompactList}\small\item\em $<$ E\+XT ID T\+AG Reading \end{DoxyCompactList}\item 
+\#define \hyperlink{can__drv_8h_ae47f1a26a2e444d56d608407864d896d}{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+S\+T\+D\+\_\+\+I\+D\+\_\+10\+\_\+4}(identifier)~((($\ast$((uint8\+\_\+t $\ast$)(\&(identifier))+1))$<$$<$5)+(($\ast$ (uint8\+\_\+t $\ast$)(\&(identifier)))$>$$>$3))
+\begin{DoxyCompactList}\small\item\em $<$ S\+TD ID Construction \end{DoxyCompactList}\item 
+\#define \hyperlink{can__drv_8h_a783682c051afdb4862f928a0bf87abb6}{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+S\+T\+D\+\_\+\+I\+D\+\_\+3\+\_\+0}(identifier)~(( $\ast$ (uint8\+\_\+t $\ast$)(\&(identifier))   )$<$$<$5)
+\item 
+\#define \hyperlink{can__drv_8h_a520400678a8edcbb98b016e39faa0a7d}{Can\+\_\+set\+\_\+std\+\_\+id}(identifier)
+\begin{DoxyCompactList}\small\item\em $<$ S\+TD ID T\+AG writing \end{DoxyCompactList}\item 
+\#define \hyperlink{can__drv_8h_a191caab6933ad9a031fc94172d335ffe}{Can\+\_\+set\+\_\+std\+\_\+msk}(mask)          
+\begin{DoxyCompactList}\small\item\em $<$ S\+TD ID M\+A\+SK writing \end{DoxyCompactList}\item 
+\#define \hyperlink{can__drv_8h_affc7c5d06dd2619f42fd0a5a427fd9db}{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+28\+\_\+21}(identifier)~((($\ast$((uint8\+\_\+t $\ast$)(\&(identifier))+3))$<$$<$3)+(($\ast$((uint8\+\_\+t $\ast$)(\&(identifier))+2))$>$$>$5))
+\begin{DoxyCompactList}\small\item\em $<$ E\+XT ID Construction \end{DoxyCompactList}\item 
+\#define \hyperlink{can__drv_8h_a52333e3fe8e4691bb39dda2dba0e4956}{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+20\+\_\+13}(identifier)~((($\ast$((uint8\+\_\+t $\ast$)(\&(identifier))+2))$<$$<$3)+(($\ast$((uint8\+\_\+t $\ast$)(\&(identifier))+1))$>$$>$5))
+\item 
+\#define \hyperlink{can__drv_8h_a5e8035d4eaacd83aa810596bf9f99f12}{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+12\+\_\+5}(identifier)~((($\ast$((uint8\+\_\+t $\ast$)(\&(identifier))+1))$<$$<$3)+(($\ast$ (uint8\+\_\+t $\ast$)(\&(identifier))   )$>$$>$5))
+\item 
+\#define \hyperlink{can__drv_8h_a660a5caf1fce6c381b93011ad8d0f6fa}{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+4\+\_\+0}( identifier)  ~(($\ast$ (uint8\+\_\+t $\ast$)(\&(identifier))   )$<$$<$3)
+\item 
+\#define \hyperlink{can__drv_8h_aea85d3067bf04543ac666147d1bb3863}{Can\+\_\+set\+\_\+ext\+\_\+id}(identifier)
+\begin{DoxyCompactList}\small\item\em $<$ E\+XT ID T\+AG writing \end{DoxyCompactList}\item 
+\#define \hyperlink{can__drv_8h_a59346071fb2c118e0ef64fb7dec0c697}{Can\+\_\+set\+\_\+ext\+\_\+msk}(mask)          
+\begin{DoxyCompactList}\small\item\em $<$ E\+XT ID M\+A\+SK writing \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8}{can\+\_\+mob\+\_\+t} \{ \\*
+\hyperlink{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8a51f8691e3e21ea1ae6c24375b7dad9e3}{M\+O\+B\+\_\+0}, 
+\hyperlink{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8a395753ce0b07adf5c92e16d24b9f68c3}{M\+O\+B\+\_\+1}, 
+\hyperlink{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8a7549439edf56cab7578b147de3ee44cb}{M\+O\+B\+\_\+2}, 
+\hyperlink{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8aefde97d6b6912ec15576b43436413fee}{M\+O\+B\+\_\+3}, 
+\\*
+\hyperlink{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8a011e6b1187ab1b3bee7279a319854964}{M\+O\+B\+\_\+4}, 
+\hyperlink{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8accad644029ff9fa6aabac44bdab464c5}{M\+O\+B\+\_\+5}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{can__drv_8h_ab057df44a5e3dea2661b0b429730a1aa}{can\+\_\+clear\+\_\+all\+\_\+mob} (void)
+\item 
+uint8\+\_\+t \hyperlink{can__drv_8h_a99a793e524da33da28de3286bc5c0e48}{can\+\_\+get\+\_\+mob\+\_\+free} (void)
+\item 
+uint8\+\_\+t \hyperlink{can__drv_8h_a6f2df23760580211e644a786e5f8fccb}{can\+\_\+get\+\_\+mob\+\_\+status} (void)
+\item 
+void \hyperlink{can__drv_8h_aad3171662b568a0f5fdd7f7cf4ab1ef5}{can\+\_\+get\+\_\+data} (uint8\+\_\+t $\ast$p\+\_\+can\+\_\+message\+\_\+data)
+\item 
+uint8\+\_\+t \hyperlink{can__drv_8h_a7c6d84925ce34b51e94b2da87bb404bf}{can\+\_\+auto\+\_\+baudrate} (uint8\+\_\+t eval)
+\item 
+uint8\+\_\+t \hyperlink{can__drv_8h_ad18c9a425ec3655833b260f1c6213969}{can\+\_\+fixed\+\_\+baudrate} (uint8\+\_\+t eval)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!B\+RP@{B\+RP}}
+\index{B\+RP@{B\+RP}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{B\+RP}{BRP}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+RP~(B\+R\+P0)}\hypertarget{can__drv_8h_a7ebc1a9bb3b1ecc2525f0cc11d257599}{}\label{can__drv_8h_a7ebc1a9bb3b1ecc2525f0cc11d257599}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!B\+R\+P\+\_\+\+M\+AX@{B\+R\+P\+\_\+\+M\+AX}}
+\index{B\+R\+P\+\_\+\+M\+AX@{B\+R\+P\+\_\+\+M\+AX}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{B\+R\+P\+\_\+\+M\+AX}{BRP_MAX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+P\+\_\+\+M\+AX~64}\hypertarget{can__drv_8h_a3102cac1069dfc36d96c9742dffb58b0}{}\label{can__drv_8h_a3102cac1069dfc36d96c9742dffb58b0}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!B\+R\+P\+\_\+\+M\+IN@{B\+R\+P\+\_\+\+M\+IN}}
+\index{B\+R\+P\+\_\+\+M\+IN@{B\+R\+P\+\_\+\+M\+IN}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{B\+R\+P\+\_\+\+M\+IN}{BRP_MIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+P\+\_\+\+M\+IN~1}\hypertarget{can__drv_8h_a127256c7d2a15068e45dde85055fc62d}{}\label{can__drv_8h_a127256c7d2a15068e45dde85055fc62d}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!B\+R\+P\+\_\+\+M\+SK@{B\+R\+P\+\_\+\+M\+SK}}
+\index{B\+R\+P\+\_\+\+M\+SK@{B\+R\+P\+\_\+\+M\+SK}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{B\+R\+P\+\_\+\+M\+SK}{BRP_MSK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define B\+R\+P\+\_\+\+M\+SK~((1$<$$<$B\+R\+P5)$\vert$(1$<$$<$B\+R\+P4)$\vert$(1$<$$<$B\+R\+P3)$\vert$(1$<$$<$B\+R\+P2)$\vert$(1$<$$<$B\+R\+P1)$\vert$(1$<$$<$B\+R\+P0))}\hypertarget{can__drv_8h_add3e981e0215ec91a65135e2861bfb9c}{}\label{can__drv_8h_add3e981e0215ec91a65135e2861bfb9c}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!C\+A\+N\+\_\+\+A\+U\+T\+O\+B\+A\+UD@{C\+A\+N\+\_\+\+A\+U\+T\+O\+B\+A\+UD}}
+\index{C\+A\+N\+\_\+\+A\+U\+T\+O\+B\+A\+UD@{C\+A\+N\+\_\+\+A\+U\+T\+O\+B\+A\+UD}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+A\+U\+T\+O\+B\+A\+UD}{CAN_AUTOBAUD}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+N\+\_\+\+A\+U\+T\+O\+B\+A\+UD~0}\hypertarget{can__drv_8h_a82238ecafc234f26ef0d3eefa42c4573}{}\label{can__drv_8h_a82238ecafc234f26ef0d3eefa42c4573}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+bit\+\_\+timing@{Can\+\_\+bit\+\_\+timing}}
+\index{Can\+\_\+bit\+\_\+timing@{Can\+\_\+bit\+\_\+timing}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+bit\+\_\+timing}{Can_bit_timing}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+bit\+\_\+timing(
+\begin{DoxyParamCaption}
+\item[{}]{mode}
+\end{DoxyParamCaption}
+)~({\bf can\+\_\+fixed\+\_\+baudrate}(mode))}\hypertarget{can__drv_8h_aa1e1b24aef2cb1dad4e4bb29c98fa722}{}\label{can__drv_8h_aa1e1b24aef2cb1dad4e4bb29c98fa722}
+The first action of \char`\"{}can\+\_\+bit\+\_\+timing()\char`\"{} is to reset the C\+AN controller \char`\"{}can\+\_\+bit\+\_\+timing()\char`\"{} lets the C\+AN controller disable \char`\"{}can\+\_\+bit\+\_\+timing()\char`\"{} returns 1 if the setting of C\+A\+N\+B\+Tx registers is available and returns 0 if the setting of C\+A\+N\+B\+Tx registers is wrong \index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+clear\+\_\+dlc@{Can\+\_\+clear\+\_\+dlc}}
+\index{Can\+\_\+clear\+\_\+dlc@{Can\+\_\+clear\+\_\+dlc}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+clear\+\_\+dlc}{Can_clear_dlc}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+clear\+\_\+dlc(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~( C\+A\+N\+C\+D\+M\+OB \&= $\sim${\bf D\+L\+C\+\_\+\+M\+SK}     )}\hypertarget{can__drv_8h_a7e710ee4358a9b95f0420c2c42b65845}{}\label{can__drv_8h_a7e710ee4358a9b95f0420c2c42b65845}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+clear\+\_\+ide@{Can\+\_\+clear\+\_\+ide}}
+\index{Can\+\_\+clear\+\_\+ide@{Can\+\_\+clear\+\_\+ide}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+clear\+\_\+ide}{Can_clear_ide}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+clear\+\_\+ide(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~( C\+A\+N\+C\+D\+M\+OB \&= $\sim$(1$<$$<$I\+DE)    )}\hypertarget{can__drv_8h_ad9e8600e8a20215b17618b5e79ec1145}{}\label{can__drv_8h_ad9e8600e8a20215b17618b5e79ec1145}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+clear\+\_\+idemsk@{Can\+\_\+clear\+\_\+idemsk}}
+\index{Can\+\_\+clear\+\_\+idemsk@{Can\+\_\+clear\+\_\+idemsk}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+clear\+\_\+idemsk}{Can_clear_idemsk}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+clear\+\_\+idemsk(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~( C\+A\+N\+I\+D\+M4 \&= $\sim$(1$<$$<$I\+D\+E\+M\+SK) )}\hypertarget{can__drv_8h_aa8dda92f97b92bb19bace216a9166013}{}\label{can__drv_8h_aa8dda92f97b92bb19bace216a9166013}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+clear\+\_\+mask\+\_\+mob@{Can\+\_\+clear\+\_\+mask\+\_\+mob}}
+\index{Can\+\_\+clear\+\_\+mask\+\_\+mob@{Can\+\_\+clear\+\_\+mask\+\_\+mob}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+clear\+\_\+mask\+\_\+mob}{Can_clear_mask_mob}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+clear\+\_\+mask\+\_\+mob(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~\{  C\+A\+N\+I\+D\+M4=0x00; C\+A\+N\+I\+D\+M3=0x00; C\+A\+N\+I\+D\+M2=0x00; C\+A\+N\+I\+D\+M1=0x00; \}}\hypertarget{can__drv_8h_a7192ceaca07e41b8361c406054ee15e5}{}\label{can__drv_8h_a7192ceaca07e41b8361c406054ee15e5}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+clear\+\_\+mob@{Can\+\_\+clear\+\_\+mob}}
+\index{Can\+\_\+clear\+\_\+mob@{Can\+\_\+clear\+\_\+mob}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+clear\+\_\+mob}{Can_clear_mob}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+clear\+\_\+mob(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~\{ uint8\+\_\+t  volatile $\ast$\+\_\+\+\_\+i\+\_\+; for (\+\_\+\+\_\+i\+\_\+=\&C\+A\+N\+S\+T\+M\+OB; \+\_\+\+\_\+i\+\_\+$<$\&C\+A\+N\+S\+T\+ML; \+\_\+\+\_\+i\+\_\+++) \{ $\ast$\+\_\+\+\_\+i\+\_\+=0x00 ;\}\}}\hypertarget{can__drv_8h_a2a8afc214c9e25a420b75ac5a686530d}{}\label{can__drv_8h_a2a8afc214c9e25a420b75ac5a686530d}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+clear\+\_\+rplv@{Can\+\_\+clear\+\_\+rplv}}
+\index{Can\+\_\+clear\+\_\+rplv@{Can\+\_\+clear\+\_\+rplv}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+clear\+\_\+rplv}{Can_clear_rplv}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+clear\+\_\+rplv(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~( C\+A\+N\+C\+D\+M\+OB \&= $\sim$(1$<$$<$R\+P\+LV)   )}\hypertarget{can__drv_8h_a55b6d2c5a05cec34fcad7b0e8faa549e}{}\label{can__drv_8h_a55b6d2c5a05cec34fcad7b0e8faa549e}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+clear\+\_\+rtr@{Can\+\_\+clear\+\_\+rtr}}
+\index{Can\+\_\+clear\+\_\+rtr@{Can\+\_\+clear\+\_\+rtr}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+clear\+\_\+rtr}{Can_clear_rtr}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+clear\+\_\+rtr(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~( C\+A\+N\+I\+D\+T4  \&= $\sim$(1$<$$<$R\+T\+R\+T\+AG) )}\hypertarget{can__drv_8h_aca46a72377e10dbee45b290eed452385}{}\label{can__drv_8h_aca46a72377e10dbee45b290eed452385}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+clear\+\_\+rtrmsk@{Can\+\_\+clear\+\_\+rtrmsk}}
+\index{Can\+\_\+clear\+\_\+rtrmsk@{Can\+\_\+clear\+\_\+rtrmsk}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+clear\+\_\+rtrmsk}{Can_clear_rtrmsk}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+clear\+\_\+rtrmsk(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~( C\+A\+N\+I\+D\+M4 \&= $\sim$(1$<$$<$R\+T\+R\+M\+SK) )}\hypertarget{can__drv_8h_af1fe0f5e57f57ba8fadaa89204f34ab0}{}\label{can__drv_8h_af1fe0f5e57f57ba8fadaa89204f34ab0}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+clear\+\_\+status\+\_\+mob@{Can\+\_\+clear\+\_\+status\+\_\+mob}}
+\index{Can\+\_\+clear\+\_\+status\+\_\+mob@{Can\+\_\+clear\+\_\+status\+\_\+mob}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+clear\+\_\+status\+\_\+mob}{Can_clear_status_mob}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+clear\+\_\+status\+\_\+mob(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~\{ C\+A\+N\+S\+T\+M\+OB=0x00; \}}\hypertarget{can__drv_8h_af0cea6d1b91d365388db689f8d566ee4}{}\label{can__drv_8h_af0cea6d1b91d365388db689f8d566ee4}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+conf\+\_\+bt@{Can\+\_\+conf\+\_\+bt}}
+\index{Can\+\_\+conf\+\_\+bt@{Can\+\_\+conf\+\_\+bt}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+conf\+\_\+bt}{Can_conf_bt}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+conf\+\_\+bt(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~\{ C\+A\+N\+B\+T1={\bf C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T1}; C\+A\+N\+B\+T2={\bf C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T2}; C\+A\+N\+B\+T3={\bf C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T3}; \}}\hypertarget{can__drv_8h_a84886d8d1c1abda71913ad4eec576497}{}\label{can__drv_8h_a84886d8d1c1abda71913ad4eec576497}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+config\+\_\+rx@{Can\+\_\+config\+\_\+rx}}
+\index{Can\+\_\+config\+\_\+rx@{Can\+\_\+config\+\_\+rx}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+config\+\_\+rx}{Can_config_rx}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+config\+\_\+rx(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~\{ {\bf D\+I\+S\+A\+B\+L\+E\+\_\+\+M\+OB}; C\+A\+N\+C\+D\+M\+OB $\vert$= ({\bf M\+O\+B\+\_\+\+Rx\+\_\+\+E\+NA}  $<$$<$ {\bf C\+O\+N\+M\+OB}); \}}\hypertarget{can__drv_8h_a7a82ffc686cae97f5caedc5c8835260d}{}\label{can__drv_8h_a7a82ffc686cae97f5caedc5c8835260d}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+config\+\_\+rx\+\_\+buffer@{Can\+\_\+config\+\_\+rx\+\_\+buffer}}
+\index{Can\+\_\+config\+\_\+rx\+\_\+buffer@{Can\+\_\+config\+\_\+rx\+\_\+buffer}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+config\+\_\+rx\+\_\+buffer}{Can_config_rx_buffer}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+config\+\_\+rx\+\_\+buffer(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~\{              C\+A\+N\+C\+D\+M\+OB $\vert$= ({\bf M\+O\+B\+\_\+\+Rx\+\_\+\+B\+E\+NA} $<$$<$ {\bf C\+O\+N\+M\+OB}); \}}\hypertarget{can__drv_8h_ada08a4a12c92db2d9418b19988ad6935}{}\label{can__drv_8h_ada08a4a12c92db2d9418b19988ad6935}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+config\+\_\+tx@{Can\+\_\+config\+\_\+tx}}
+\index{Can\+\_\+config\+\_\+tx@{Can\+\_\+config\+\_\+tx}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+config\+\_\+tx}{Can_config_tx}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+config\+\_\+tx(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~\{ {\bf D\+I\+S\+A\+B\+L\+E\+\_\+\+M\+OB}; C\+A\+N\+C\+D\+M\+OB $\vert$= ({\bf M\+O\+B\+\_\+\+Tx\+\_\+\+E\+NA}  $<$$<$ {\bf C\+O\+N\+M\+OB}); \}}\hypertarget{can__drv_8h_aa08432faaa061f11560ac5071894e6e8}{}\label{can__drv_8h_aa08432faaa061f11560ac5071894e6e8}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+disable@{Can\+\_\+disable}}
+\index{Can\+\_\+disable@{Can\+\_\+disable}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+disable}{Can_disable}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+disable(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~( C\+A\+N\+G\+C\+ON \&= $\sim$(1$<$$<$E\+N\+A\+S\+TB))}\hypertarget{can__drv_8h_a60a04b5268983834db3bbf757034d41d}{}\label{can__drv_8h_a60a04b5268983834db3bbf757034d41d}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+enable@{Can\+\_\+enable}}
+\index{Can\+\_\+enable@{Can\+\_\+enable}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+enable}{Can_enable}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+enable(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~( C\+A\+N\+G\+C\+ON $\vert$=  (1$<$$<$E\+N\+A\+S\+TB))}\hypertarget{can__drv_8h_aeb0b368e9e5a3c0e619a86b577db9e0a}{}\label{can__drv_8h_aeb0b368e9e5a3c0e619a86b577db9e0a}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+full\+\_\+abort@{Can\+\_\+full\+\_\+abort}}
+\index{Can\+\_\+full\+\_\+abort@{Can\+\_\+full\+\_\+abort}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+full\+\_\+abort}{Can_full_abort}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+full\+\_\+abort(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~\{ C\+A\+N\+G\+C\+ON $\vert$=  (1$<$$<$A\+B\+RQ); C\+A\+N\+G\+C\+ON \&= $\sim$(1$<$$<$A\+B\+RQ); \}}\hypertarget{can__drv_8h_aa5094f1885ef4038019d4b76f163ccbc}{}\label{can__drv_8h_aa5094f1885ef4038019d4b76f163ccbc}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+get\+\_\+dlc@{Can\+\_\+get\+\_\+dlc}}
+\index{Can\+\_\+get\+\_\+dlc@{Can\+\_\+get\+\_\+dlc}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+get\+\_\+dlc}{Can_get_dlc}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+get\+\_\+dlc(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~((C\+A\+N\+C\+D\+M\+OB \&  {\bf D\+L\+C\+\_\+\+M\+SK})     $>$$>$ {\bf D\+LC}   )}\hypertarget{can__drv_8h_acfc3c45d4d31bb2562a3bab66dfa23d5}{}\label{can__drv_8h_acfc3c45d4d31bb2562a3bab66dfa23d5}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+get\+\_\+ext\+\_\+id@{Can\+\_\+get\+\_\+ext\+\_\+id}}
+\index{Can\+\_\+get\+\_\+ext\+\_\+id@{Can\+\_\+get\+\_\+ext\+\_\+id}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+get\+\_\+ext\+\_\+id}{Can_get_ext_id}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+get\+\_\+ext\+\_\+id(
+\begin{DoxyParamCaption}
+\item[{}]{identifier}
+\end{DoxyParamCaption}
+)}\hypertarget{can__drv_8h_a4276228ae1364d0a2d4d6fbbafd2e79f}{}\label{can__drv_8h_a4276228ae1364d0a2d4d6fbbafd2e79f}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ *((uint8\_t *)(&(identifier))+3) =  CANIDT1>>3              ; \(\backslash\)
+                                      *((uint8\_t *)(&(identifier))+2) = (CANIDT2>>3)+(CANIDT1<<5); \(\backslash\)
+                                      *((uint8\_t *)(&(identifier))+1) = (CANIDT3>>3)+(CANIDT2<<5); \(\backslash\)
+                                      *((uint8\_t *)(&(identifier))  ) = (CANIDT4>>3)+(CANIDT3<<5); \}
+\end{DoxyCode}
+
+
+$<$ E\+XT ID T\+AG Reading 
+
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+get\+\_\+ide@{Can\+\_\+get\+\_\+ide}}
+\index{Can\+\_\+get\+\_\+ide@{Can\+\_\+get\+\_\+ide}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+get\+\_\+ide}{Can_get_ide}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+get\+\_\+ide(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~((C\+A\+N\+C\+D\+M\+OB \&  (1$<$$<$I\+DE))    $>$$>$ I\+DE   )}\hypertarget{can__drv_8h_a0ec7e96951dc660d66d6ab79c89f6230}{}\label{can__drv_8h_a0ec7e96951dc660d66d6ab79c89f6230}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+get\+\_\+rtr@{Can\+\_\+get\+\_\+rtr}}
+\index{Can\+\_\+get\+\_\+rtr@{Can\+\_\+get\+\_\+rtr}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+get\+\_\+rtr}{Can_get_rtr}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+get\+\_\+rtr(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~((C\+A\+N\+I\+D\+T4  \&  (1$<$$<$R\+T\+R\+T\+AG)) $>$$>$ R\+T\+R\+T\+AG)}\hypertarget{can__drv_8h_a548f0895b513b7904548a014f3ac0cbf}{}\label{can__drv_8h_a548f0895b513b7904548a014f3ac0cbf}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+get\+\_\+std\+\_\+id@{Can\+\_\+get\+\_\+std\+\_\+id}}
+\index{Can\+\_\+get\+\_\+std\+\_\+id@{Can\+\_\+get\+\_\+std\+\_\+id}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+get\+\_\+std\+\_\+id}{Can_get_std_id}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+get\+\_\+std\+\_\+id(
+\begin{DoxyParamCaption}
+\item[{}]{identifier}
+\end{DoxyParamCaption}
+)}\hypertarget{can__drv_8h_a176e377a71762bdf4665c1d70509d3ee}{}\label{can__drv_8h_a176e377a71762bdf4665c1d70509d3ee}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ *((uint8\_t *)(&(identifier))+1) =  CANIDT1>>5              ; \(\backslash\)
+                                      *((uint8\_t *)(&(identifier))  ) = (CANIDT2>>5)+(CANIDT1<<3); \}
+\end{DoxyCode}
+
+
+$<$ S\+TD ID T\+AG Reading 
+
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!C\+A\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+P\+IN@{C\+A\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+P\+IN}}
+\index{C\+A\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+P\+IN@{C\+A\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+P\+IN}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+P\+IN}{CAN_INPUT_PIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+N\+\_\+\+I\+N\+P\+U\+T\+\_\+\+P\+IN~3}\hypertarget{can__drv_8h_a4c55cfaffbcb1a4fa35ae5350a83d5a8}{}\label{can__drv_8h_a4c55cfaffbcb1a4fa35ae5350a83d5a8}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+mob\+\_\+abort@{Can\+\_\+mob\+\_\+abort}}
+\index{Can\+\_\+mob\+\_\+abort@{Can\+\_\+mob\+\_\+abort}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+mob\+\_\+abort}{Can_mob_abort}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+mob\+\_\+abort(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~( {\bf D\+I\+S\+A\+B\+L\+E\+\_\+\+M\+OB} )}\hypertarget{can__drv_8h_a4ee8435c169285bcf605855f76fff4d3}{}\label{can__drv_8h_a4ee8435c169285bcf605855f76fff4d3}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!C\+A\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+IN@{C\+A\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+IN}}
+\index{C\+A\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+IN@{C\+A\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+IN}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+IN}{CAN_OUTPUT_PIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+N\+\_\+\+O\+U\+T\+P\+U\+T\+\_\+\+P\+IN~2}\hypertarget{can__drv_8h_a87eeb0af4b7ef222375f95ae1036d1d7}{}\label{can__drv_8h_a87eeb0af4b7ef222375f95ae1036d1d7}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+D\+IR@{C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+D\+IR}}
+\index{C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+D\+IR@{C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+D\+IR}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+D\+IR}{CAN_PORT_DIR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+D\+IR~D\+D\+RC}\hypertarget{can__drv_8h_ac584aea798b5df01f89d48e437a810f6}{}\label{can__drv_8h_ac584aea798b5df01f89d48e437a810f6}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+IN@{C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+IN}}
+\index{C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+IN@{C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+IN}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+IN}{CAN_PORT_IN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+IN~P\+I\+NC}\hypertarget{can__drv_8h_a9a98e5bc51eab0a3e183a737f6447a9f}{}\label{can__drv_8h_a9a98e5bc51eab0a3e183a737f6447a9f}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+O\+UT@{C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+O\+UT}}
+\index{C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+O\+UT@{C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+O\+UT}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+O\+UT}{CAN_PORT_OUT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+N\+\_\+\+P\+O\+R\+T\+\_\+\+O\+UT~P\+O\+R\+TC}\hypertarget{can__drv_8h_ab85845f8c8873351c9604e5a5411bfd9}{}\label{can__drv_8h_ab85845f8c8873351c9604e5a5411bfd9}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+reset@{Can\+\_\+reset}}
+\index{Can\+\_\+reset@{Can\+\_\+reset}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+reset}{Can_reset}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+reset(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~( C\+A\+N\+G\+C\+ON  =  (1$<$$<$S\+W\+R\+ES) )}\hypertarget{can__drv_8h_a6137125f3f2a2674bdfc2d4c6a417737}{}\label{can__drv_8h_a6137125f3f2a2674bdfc2d4c6a417737}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+set\+\_\+dlc@{Can\+\_\+set\+\_\+dlc}}
+\index{Can\+\_\+set\+\_\+dlc@{Can\+\_\+set\+\_\+dlc}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+set\+\_\+dlc}{Can_set_dlc}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+set\+\_\+dlc(
+\begin{DoxyParamCaption}
+\item[{}]{dlc}
+\end{DoxyParamCaption}
+)~( C\+A\+N\+C\+D\+M\+OB $\vert$= (dlc)        )}\hypertarget{can__drv_8h_ab3d86a91b9ba68a3e729b139286e2fa7}{}\label{can__drv_8h_ab3d86a91b9ba68a3e729b139286e2fa7}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+set\+\_\+ext\+\_\+id@{Can\+\_\+set\+\_\+ext\+\_\+id}}
+\index{Can\+\_\+set\+\_\+ext\+\_\+id@{Can\+\_\+set\+\_\+ext\+\_\+id}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+set\+\_\+ext\+\_\+id}{Can_set_ext_id}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+set\+\_\+ext\+\_\+id(
+\begin{DoxyParamCaption}
+\item[{}]{identifier}
+\end{DoxyParamCaption}
+)}\hypertarget{can__drv_8h_aea85d3067bf04543ac666147d1bb3863}{}\label{can__drv_8h_aea85d3067bf04543ac666147d1bb3863}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ CANIDT1   = \hyperlink{can__drv_8h_affc7c5d06dd2619f42fd0a5a427fd9db}{CAN\_SET\_EXT\_ID\_28\_21}(identifier); \(\backslash\)
+                                      CANIDT2   = \hyperlink{can__drv_8h_a52333e3fe8e4691bb39dda2dba0e4956}{CAN\_SET\_EXT\_ID\_20\_13}(identifier); \(\backslash\)
+                                      CANIDT3   = \hyperlink{can__drv_8h_a5e8035d4eaacd83aa810596bf9f99f12}{CAN\_SET\_EXT\_ID\_12\_5}( identifier); \(\backslash\)
+                                      CANIDT4   = \hyperlink{can__drv_8h_a660a5caf1fce6c381b93011ad8d0f6fa}{CAN\_SET\_EXT\_ID\_4\_0}(  identifier); \(\backslash\)
+                                      CANCDMOB |= (1<<IDE);                         \}
+\end{DoxyCode}
+
+
+$<$ E\+XT ID T\+AG writing 
+
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+12\+\_\+5@{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+12\+\_\+5}}
+\index{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+12\+\_\+5@{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+12\+\_\+5}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+12\+\_\+5}{CAN_SET_EXT_ID_12_5}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+12\+\_\+5(
+\begin{DoxyParamCaption}
+\item[{}]{identifier}
+\end{DoxyParamCaption}
+)~((($\ast$((uint8\+\_\+t $\ast$)(\&(identifier))+1))$<$$<$3)+(($\ast$ (uint8\+\_\+t $\ast$)(\&(identifier))   )$>$$>$5))}\hypertarget{can__drv_8h_a5e8035d4eaacd83aa810596bf9f99f12}{}\label{can__drv_8h_a5e8035d4eaacd83aa810596bf9f99f12}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+20\+\_\+13@{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+20\+\_\+13}}
+\index{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+20\+\_\+13@{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+20\+\_\+13}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+20\+\_\+13}{CAN_SET_EXT_ID_20_13}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+20\+\_\+13(
+\begin{DoxyParamCaption}
+\item[{}]{identifier}
+\end{DoxyParamCaption}
+)~((($\ast$((uint8\+\_\+t $\ast$)(\&(identifier))+2))$<$$<$3)+(($\ast$((uint8\+\_\+t $\ast$)(\&(identifier))+1))$>$$>$5))}\hypertarget{can__drv_8h_a52333e3fe8e4691bb39dda2dba0e4956}{}\label{can__drv_8h_a52333e3fe8e4691bb39dda2dba0e4956}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+28\+\_\+21@{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+28\+\_\+21}}
+\index{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+28\+\_\+21@{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+28\+\_\+21}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+28\+\_\+21}{CAN_SET_EXT_ID_28_21}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+28\+\_\+21(
+\begin{DoxyParamCaption}
+\item[{}]{identifier}
+\end{DoxyParamCaption}
+)~((($\ast$((uint8\+\_\+t $\ast$)(\&(identifier))+3))$<$$<$3)+(($\ast$((uint8\+\_\+t $\ast$)(\&(identifier))+2))$>$$>$5))}\hypertarget{can__drv_8h_affc7c5d06dd2619f42fd0a5a427fd9db}{}\label{can__drv_8h_affc7c5d06dd2619f42fd0a5a427fd9db}
+
+
+$<$ E\+XT ID Construction 
+
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+4\+\_\+0@{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+4\+\_\+0}}
+\index{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+4\+\_\+0@{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+4\+\_\+0}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+4\+\_\+0}{CAN_SET_EXT_ID_4_0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+E\+X\+T\+\_\+\+I\+D\+\_\+4\+\_\+0(
+\begin{DoxyParamCaption}
+\item[{}]{identifier}
+\end{DoxyParamCaption}
+)~(($\ast$ (uint8\+\_\+t $\ast$)(\&(identifier))   )$<$$<$3)}\hypertarget{can__drv_8h_a660a5caf1fce6c381b93011ad8d0f6fa}{}\label{can__drv_8h_a660a5caf1fce6c381b93011ad8d0f6fa}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+set\+\_\+ext\+\_\+msk@{Can\+\_\+set\+\_\+ext\+\_\+msk}}
+\index{Can\+\_\+set\+\_\+ext\+\_\+msk@{Can\+\_\+set\+\_\+ext\+\_\+msk}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+set\+\_\+ext\+\_\+msk}{Can_set_ext_msk}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+set\+\_\+ext\+\_\+msk(
+\begin{DoxyParamCaption}
+\item[{}]{mask}
+\end{DoxyParamCaption}
+)}\hypertarget{can__drv_8h_a59346071fb2c118e0ef64fb7dec0c697}{}\label{can__drv_8h_a59346071fb2c118e0ef64fb7dec0c697}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ CANIDM1   = \hyperlink{can__drv_8h_affc7c5d06dd2619f42fd0a5a427fd9db}{CAN\_SET\_EXT\_ID\_28\_21}(mask); \(\backslash\)
+                                      CANIDM2   = \hyperlink{can__drv_8h_a52333e3fe8e4691bb39dda2dba0e4956}{CAN\_SET\_EXT\_ID\_20\_13}(mask); \(\backslash\)
+                                      CANIDM3   = \hyperlink{can__drv_8h_a5e8035d4eaacd83aa810596bf9f99f12}{CAN\_SET\_EXT\_ID\_12\_5}( mask); \(\backslash\)
+                                      CANIDM4   = \hyperlink{can__drv_8h_a660a5caf1fce6c381b93011ad8d0f6fa}{CAN\_SET\_EXT\_ID\_4\_0}(  mask); \}
+\end{DoxyCode}
+
+
+$<$ E\+XT ID M\+A\+SK writing 
+
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+set\+\_\+ide@{Can\+\_\+set\+\_\+ide}}
+\index{Can\+\_\+set\+\_\+ide@{Can\+\_\+set\+\_\+ide}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+set\+\_\+ide}{Can_set_ide}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+set\+\_\+ide(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~( C\+A\+N\+C\+D\+M\+OB $\vert$= (1$<$$<$I\+DE)     )}\hypertarget{can__drv_8h_ae1c390a2afbc044f56af9deedb5dcebd}{}\label{can__drv_8h_ae1c390a2afbc044f56af9deedb5dcebd}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+set\+\_\+idemsk@{Can\+\_\+set\+\_\+idemsk}}
+\index{Can\+\_\+set\+\_\+idemsk@{Can\+\_\+set\+\_\+idemsk}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+set\+\_\+idemsk}{Can_set_idemsk}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+set\+\_\+idemsk(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~( C\+A\+N\+I\+D\+M4 $\vert$= (1$<$$<$I\+D\+E\+M\+SK) )}\hypertarget{can__drv_8h_aa1ea2807860f194c240a6a6574a698d9}{}\label{can__drv_8h_aa1ea2807860f194c240a6a6574a698d9}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+set\+\_\+mask\+\_\+mob@{Can\+\_\+set\+\_\+mask\+\_\+mob}}
+\index{Can\+\_\+set\+\_\+mask\+\_\+mob@{Can\+\_\+set\+\_\+mask\+\_\+mob}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+set\+\_\+mask\+\_\+mob}{Can_set_mask_mob}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+set\+\_\+mask\+\_\+mob(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~\{  C\+A\+N\+I\+D\+M4=0x\+F\+F; C\+A\+N\+I\+D\+M3=0x\+F\+F; C\+A\+N\+I\+D\+M2=0x\+F\+F; C\+A\+N\+I\+D\+M1=0x\+F\+F; \}}\hypertarget{can__drv_8h_a4f541b0191fcb521298a7289a09d5fa0}{}\label{can__drv_8h_a4f541b0191fcb521298a7289a09d5fa0}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+set\+\_\+mob@{Can\+\_\+set\+\_\+mob}}
+\index{Can\+\_\+set\+\_\+mob@{Can\+\_\+set\+\_\+mob}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+set\+\_\+mob}{Can_set_mob}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+set\+\_\+mob(
+\begin{DoxyParamCaption}
+\item[{}]{mob}
+\end{DoxyParamCaption}
+)~\{ C\+A\+N\+P\+A\+GE = ((mob) $<$$<$ 4);\}}\hypertarget{can__drv_8h_ac270dbdff32dfd1e232f4f6a23bdbebb}{}\label{can__drv_8h_ac270dbdff32dfd1e232f4f6a23bdbebb}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+set\+\_\+rplv@{Can\+\_\+set\+\_\+rplv}}
+\index{Can\+\_\+set\+\_\+rplv@{Can\+\_\+set\+\_\+rplv}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+set\+\_\+rplv}{Can_set_rplv}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+set\+\_\+rplv(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~( C\+A\+N\+C\+D\+M\+OB $\vert$= (1$<$$<$R\+P\+LV)    )}\hypertarget{can__drv_8h_a345dab61e199902a9d6d76308c6fa787}{}\label{can__drv_8h_a345dab61e199902a9d6d76308c6fa787}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+set\+\_\+rtr@{Can\+\_\+set\+\_\+rtr}}
+\index{Can\+\_\+set\+\_\+rtr@{Can\+\_\+set\+\_\+rtr}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+set\+\_\+rtr}{Can_set_rtr}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+set\+\_\+rtr(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~( C\+A\+N\+I\+D\+T4  $\vert$= (1$<$$<$R\+T\+R\+T\+AG)  )}\hypertarget{can__drv_8h_a5dfbffd54165bc12eba5d13cee1c97dc}{}\label{can__drv_8h_a5dfbffd54165bc12eba5d13cee1c97dc}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+set\+\_\+rtrmsk@{Can\+\_\+set\+\_\+rtrmsk}}
+\index{Can\+\_\+set\+\_\+rtrmsk@{Can\+\_\+set\+\_\+rtrmsk}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+set\+\_\+rtrmsk}{Can_set_rtrmsk}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+set\+\_\+rtrmsk(
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)~( C\+A\+N\+I\+D\+M4 $\vert$= (1$<$$<$R\+T\+R\+M\+SK) )}\hypertarget{can__drv_8h_a09345b71e39ffe032e0f74ff0361d256}{}\label{can__drv_8h_a09345b71e39ffe032e0f74ff0361d256}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+set\+\_\+std\+\_\+id@{Can\+\_\+set\+\_\+std\+\_\+id}}
+\index{Can\+\_\+set\+\_\+std\+\_\+id@{Can\+\_\+set\+\_\+std\+\_\+id}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+set\+\_\+std\+\_\+id}{Can_set_std_id}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+set\+\_\+std\+\_\+id(
+\begin{DoxyParamCaption}
+\item[{}]{identifier}
+\end{DoxyParamCaption}
+)}\hypertarget{can__drv_8h_a520400678a8edcbb98b016e39faa0a7d}{}\label{can__drv_8h_a520400678a8edcbb98b016e39faa0a7d}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ CANIDT1   = \hyperlink{can__drv_8h_ae47f1a26a2e444d56d608407864d896d}{CAN\_SET\_STD\_ID\_10\_4}(identifier); \(\backslash\)
+                                      CANIDT2   = \hyperlink{can__drv_8h_a783682c051afdb4862f928a0bf87abb6}{CAN\_SET\_STD\_ID\_3\_0}( identifier); \(\backslash\)
+                                      CANCDMOB &= (~(1<<IDE))                    ; \}
+\end{DoxyCode}
+
+
+$<$ S\+TD ID T\+AG writing 
+
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+S\+T\+D\+\_\+\+I\+D\+\_\+10\+\_\+4@{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+S\+T\+D\+\_\+\+I\+D\+\_\+10\+\_\+4}}
+\index{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+S\+T\+D\+\_\+\+I\+D\+\_\+10\+\_\+4@{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+S\+T\+D\+\_\+\+I\+D\+\_\+10\+\_\+4}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+S\+T\+D\+\_\+\+I\+D\+\_\+10\+\_\+4}{CAN_SET_STD_ID_10_4}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+S\+T\+D\+\_\+\+I\+D\+\_\+10\+\_\+4(
+\begin{DoxyParamCaption}
+\item[{}]{identifier}
+\end{DoxyParamCaption}
+)~((($\ast$((uint8\+\_\+t $\ast$)(\&(identifier))+1))$<$$<$5)+(($\ast$ (uint8\+\_\+t $\ast$)(\&(identifier)))$>$$>$3))}\hypertarget{can__drv_8h_ae47f1a26a2e444d56d608407864d896d}{}\label{can__drv_8h_ae47f1a26a2e444d56d608407864d896d}
+
+
+$<$ S\+TD ID Construction 
+
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+S\+T\+D\+\_\+\+I\+D\+\_\+3\+\_\+0@{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+S\+T\+D\+\_\+\+I\+D\+\_\+3\+\_\+0}}
+\index{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+S\+T\+D\+\_\+\+I\+D\+\_\+3\+\_\+0@{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+S\+T\+D\+\_\+\+I\+D\+\_\+3\+\_\+0}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+S\+T\+D\+\_\+\+I\+D\+\_\+3\+\_\+0}{CAN_SET_STD_ID_3_0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+A\+N\+\_\+\+S\+E\+T\+\_\+\+S\+T\+D\+\_\+\+I\+D\+\_\+3\+\_\+0(
+\begin{DoxyParamCaption}
+\item[{}]{identifier}
+\end{DoxyParamCaption}
+)~(( $\ast$ (uint8\+\_\+t $\ast$)(\&(identifier))   )$<$$<$5)}\hypertarget{can__drv_8h_a783682c051afdb4862f928a0bf87abb6}{}\label{can__drv_8h_a783682c051afdb4862f928a0bf87abb6}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!Can\+\_\+set\+\_\+std\+\_\+msk@{Can\+\_\+set\+\_\+std\+\_\+msk}}
+\index{Can\+\_\+set\+\_\+std\+\_\+msk@{Can\+\_\+set\+\_\+std\+\_\+msk}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{Can\+\_\+set\+\_\+std\+\_\+msk}{Can_set_std_msk}}]{\setlength{\rightskip}{0pt plus 5cm}\#define Can\+\_\+set\+\_\+std\+\_\+msk(
+\begin{DoxyParamCaption}
+\item[{}]{mask}
+\end{DoxyParamCaption}
+)}\hypertarget{can__drv_8h_a191caab6933ad9a031fc94172d335ffe}{}\label{can__drv_8h_a191caab6933ad9a031fc94172d335ffe}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{ CANIDM1   = \hyperlink{can__drv_8h_ae47f1a26a2e444d56d608407864d896d}{CAN\_SET\_STD\_ID\_10\_4}(mask); \(\backslash\)
+                                      CANIDM2   = \hyperlink{can__drv_8h_a783682c051afdb4862f928a0bf87abb6}{CAN\_SET\_STD\_ID\_3\_0}( mask); \}
+\end{DoxyCode}
+
+
+$<$ S\+TD ID M\+A\+SK writing 
+
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T1@{C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T1}}
+\index{C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T1@{C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T1}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T1}{CONF_CANBT1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T1~0x02}\hypertarget{can__drv_8h_ab05110db654464e4cec33dfeb1e2db5a}{}\label{can__drv_8h_ab05110db654464e4cec33dfeb1e2db5a}
+
+
+$<$ Fclkio = 16 M\+Hz, Tclkio = 62.\+5 ns 
+
+$<$ Fclkio = 12 M\+Hz, Tclkio = 83.\+333 ns $<$ Fclkio = 8 M\+Hz, Tclkio = 125 ns -- 100\+Kb/s, 16x Tscl, sampling at 75\% $<$ -- 125\+Kb/s, 16x Tscl, sampling at 75\% $<$ -- 200\+Kb/s, 20x Tscl, sampling at 75\% $<$ -- 250\+Kb/s, 16x Tscl, sampling at 75\% $<$ -- 500\+Kb/s, 8x Tscl, sampling at 75\% \index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T2@{C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T2}}
+\index{C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T2@{C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T2}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T2}{CONF_CANBT2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T2~0x04}\hypertarget{can__drv_8h_afc2b07b57b39c35cc99a0a33303bc610}{}\label{can__drv_8h_afc2b07b57b39c35cc99a0a33303bc610}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T3@{C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T3}}
+\index{C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T3@{C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T3}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T3}{CONF_CANBT3}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T3~0x13}\hypertarget{can__drv_8h_a5acd623fc47dd79cdf22d7e384872132}{}\label{can__drv_8h_a5acd623fc47dd79cdf22d7e384872132}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!C\+O\+N\+M\+OB@{C\+O\+N\+M\+OB}}
+\index{C\+O\+N\+M\+OB@{C\+O\+N\+M\+OB}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+M\+OB}{CONMOB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+M\+OB~(C\+O\+N\+M\+O\+B0)}\hypertarget{can__drv_8h_accf884871de3bbbbfbcaceac9fe6246e}{}\label{can__drv_8h_accf884871de3bbbbfbcaceac9fe6246e}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!C\+O\+N\+M\+O\+B\+\_\+\+M\+SK@{C\+O\+N\+M\+O\+B\+\_\+\+M\+SK}}
+\index{C\+O\+N\+M\+O\+B\+\_\+\+M\+SK@{C\+O\+N\+M\+O\+B\+\_\+\+M\+SK}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{C\+O\+N\+M\+O\+B\+\_\+\+M\+SK}{CONMOB_MSK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\+O\+N\+M\+O\+B\+\_\+\+M\+SK~((1$<$$<$C\+O\+N\+M\+O\+B1)$\vert$(1$<$$<$C\+O\+N\+M\+O\+B0))}\hypertarget{can__drv_8h_aecd3014a798c8632cb336f039d255093}{}\label{can__drv_8h_aecd3014a798c8632cb336f039d255093}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!D\+I\+S\+A\+B\+L\+E\+\_\+\+M\+OB@{D\+I\+S\+A\+B\+L\+E\+\_\+\+M\+OB}}
+\index{D\+I\+S\+A\+B\+L\+E\+\_\+\+M\+OB@{D\+I\+S\+A\+B\+L\+E\+\_\+\+M\+OB}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{D\+I\+S\+A\+B\+L\+E\+\_\+\+M\+OB}{DISABLE_MOB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+I\+S\+A\+B\+L\+E\+\_\+\+M\+OB~( C\+A\+N\+C\+D\+M\+OB \&= ($\sim${\bf C\+O\+N\+M\+O\+B\+\_\+\+M\+SK}) )}\hypertarget{can__drv_8h_ac4ba11db63ce1f27aea62bb68fbdcab7}{}\label{can__drv_8h_ac4ba11db63ce1f27aea62bb68fbdcab7}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!D\+LC@{D\+LC}}
+\index{D\+LC@{D\+LC}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{D\+LC}{DLC}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+LC~(D\+L\+C0)}\hypertarget{can__drv_8h_a3a701690309f7a22fabc465efee30c17}{}\label{can__drv_8h_a3a701690309f7a22fabc465efee30c17}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!D\+L\+C\+\_\+\+M\+SK@{D\+L\+C\+\_\+\+M\+SK}}
+\index{D\+L\+C\+\_\+\+M\+SK@{D\+L\+C\+\_\+\+M\+SK}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{D\+L\+C\+\_\+\+M\+SK}{DLC_MSK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+L\+C\+\_\+\+M\+SK~((1$<$$<$D\+L\+C3)$\vert$(1$<$$<$D\+L\+C2)$\vert$(1$<$$<$D\+L\+C1)$\vert$(1$<$$<$D\+L\+C0))}\hypertarget{can__drv_8h_a8d6d05c1f8a155012276ab5cf4287c17}{}\label{can__drv_8h_a8d6d05c1f8a155012276ab5cf4287c17}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!E\+R\+R\+\_\+\+G\+E\+N\+\_\+\+M\+SK@{E\+R\+R\+\_\+\+G\+E\+N\+\_\+\+M\+SK}}
+\index{E\+R\+R\+\_\+\+G\+E\+N\+\_\+\+M\+SK@{E\+R\+R\+\_\+\+G\+E\+N\+\_\+\+M\+SK}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+\_\+\+G\+E\+N\+\_\+\+M\+SK}{ERR_GEN_MSK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+\_\+\+G\+E\+N\+\_\+\+M\+SK~((1$<$$<$S\+E\+RG)$\vert$(1$<$$<$C\+E\+RG)$\vert$(1$<$$<$F\+E\+RG)$\vert$(1$<$$<$A\+E\+RG))}\hypertarget{can__drv_8h_ad6cb556c3426a0e2f0e68185c1724011}{}\label{can__drv_8h_ad6cb556c3426a0e2f0e68185c1724011}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!E\+R\+R\+\_\+\+M\+O\+B\+\_\+\+M\+SK@{E\+R\+R\+\_\+\+M\+O\+B\+\_\+\+M\+SK}}
+\index{E\+R\+R\+\_\+\+M\+O\+B\+\_\+\+M\+SK@{E\+R\+R\+\_\+\+M\+O\+B\+\_\+\+M\+SK}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{E\+R\+R\+\_\+\+M\+O\+B\+\_\+\+M\+SK}{ERR_MOB_MSK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define E\+R\+R\+\_\+\+M\+O\+B\+\_\+\+M\+SK~((1$<$$<$B\+E\+RR)$\vert$(1$<$$<$S\+E\+RR)$\vert$(1$<$$<$C\+E\+RR)$\vert$(1$<$$<$F\+E\+RR)$\vert$(1$<$$<$A\+E\+RR))}\hypertarget{can__drv_8h_ad593d845ece9bc5e01003523bdedb861}{}\label{can__drv_8h_ad593d845ece9bc5e01003523bdedb861}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!H\+P\+M\+O\+B\+\_\+\+M\+SK@{H\+P\+M\+O\+B\+\_\+\+M\+SK}}
+\index{H\+P\+M\+O\+B\+\_\+\+M\+SK@{H\+P\+M\+O\+B\+\_\+\+M\+SK}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{H\+P\+M\+O\+B\+\_\+\+M\+SK}{HPMOB_MSK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define H\+P\+M\+O\+B\+\_\+\+M\+SK~((1$<$$<$H\+P\+M\+O\+B3)$\vert$(1$<$$<$H\+P\+M\+O\+B2)$\vert$(1$<$$<$H\+P\+M\+O\+B1)$\vert$(1$<$$<$H\+P\+M\+O\+B0))}\hypertarget{can__drv_8h_afef4c68019ab8ff0d493076a1975d72e}{}\label{can__drv_8h_afef4c68019ab8ff0d493076a1975d72e}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!I\+N\+T\+\_\+\+G\+E\+N\+\_\+\+M\+SK@{I\+N\+T\+\_\+\+G\+E\+N\+\_\+\+M\+SK}}
+\index{I\+N\+T\+\_\+\+G\+E\+N\+\_\+\+M\+SK@{I\+N\+T\+\_\+\+G\+E\+N\+\_\+\+M\+SK}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{I\+N\+T\+\_\+\+G\+E\+N\+\_\+\+M\+SK}{INT_GEN_MSK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+\_\+\+G\+E\+N\+\_\+\+M\+SK~((1$<$$<$B\+O\+F\+F\+IT)$\vert$(1$<$$<$B\+X\+OK)$\vert$({\bf E\+R\+R\+\_\+\+G\+E\+N\+\_\+\+M\+SK}))}\hypertarget{can__drv_8h_a9acc9a282f36f4770961c07555dd1a92}{}\label{can__drv_8h_a9acc9a282f36f4770961c07555dd1a92}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!I\+N\+T\+\_\+\+M\+O\+B\+\_\+\+M\+SK@{I\+N\+T\+\_\+\+M\+O\+B\+\_\+\+M\+SK}}
+\index{I\+N\+T\+\_\+\+M\+O\+B\+\_\+\+M\+SK@{I\+N\+T\+\_\+\+M\+O\+B\+\_\+\+M\+SK}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{I\+N\+T\+\_\+\+M\+O\+B\+\_\+\+M\+SK}{INT_MOB_MSK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define I\+N\+T\+\_\+\+M\+O\+B\+\_\+\+M\+SK~((1$<$$<$T\+X\+OK)$\vert$(1$<$$<$R\+X\+OK)$\vert$(1$<$$<$B\+E\+RR)$\vert$(1$<$$<$S\+E\+RR)$\vert$(1$<$$<$C\+E\+RR)$\vert$(1$<$$<$F\+E\+RR)$\vert$(1$<$$<$A\+E\+RR))}\hypertarget{can__drv_8h_a015a90b10f6e6c9a59d0012d40fcc18a}{}\label{can__drv_8h_a015a90b10f6e6c9a59d0012d40fcc18a}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!L\+A\+S\+T\+\_\+\+M\+O\+B\+\_\+\+NB@{L\+A\+S\+T\+\_\+\+M\+O\+B\+\_\+\+NB}}
+\index{L\+A\+S\+T\+\_\+\+M\+O\+B\+\_\+\+NB@{L\+A\+S\+T\+\_\+\+M\+O\+B\+\_\+\+NB}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{L\+A\+S\+T\+\_\+\+M\+O\+B\+\_\+\+NB}{LAST_MOB_NB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\+A\+S\+T\+\_\+\+M\+O\+B\+\_\+\+NB~({\bf N\+B\+\_\+\+M\+OB}-\/1)}\hypertarget{can__drv_8h_ab51fad1d3591bcde28a34d8580bfddc5}{}\label{can__drv_8h_ab51fad1d3591bcde28a34d8580bfddc5}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+\+A\+C\+K\+\_\+\+E\+R\+R\+OR@{M\+O\+B\+\_\+\+A\+C\+K\+\_\+\+E\+R\+R\+OR}}
+\index{M\+O\+B\+\_\+\+A\+C\+K\+\_\+\+E\+R\+R\+OR@{M\+O\+B\+\_\+\+A\+C\+K\+\_\+\+E\+R\+R\+OR}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+B\+\_\+\+A\+C\+K\+\_\+\+E\+R\+R\+OR}{MOB_ACK_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+B\+\_\+\+A\+C\+K\+\_\+\+E\+R\+R\+OR~(1$<$$<$A\+E\+RR)}\hypertarget{can__drv_8h_af52b9555787686c7143879d86f12811b}{}\label{can__drv_8h_af52b9555787686c7143879d86f12811b}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+\+B\+I\+T\+\_\+\+E\+R\+R\+OR@{M\+O\+B\+\_\+\+B\+I\+T\+\_\+\+E\+R\+R\+OR}}
+\index{M\+O\+B\+\_\+\+B\+I\+T\+\_\+\+E\+R\+R\+OR@{M\+O\+B\+\_\+\+B\+I\+T\+\_\+\+E\+R\+R\+OR}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+B\+\_\+\+B\+I\+T\+\_\+\+E\+R\+R\+OR}{MOB_BIT_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+B\+\_\+\+B\+I\+T\+\_\+\+E\+R\+R\+OR~(1$<$$<$B\+E\+RR)}\hypertarget{can__drv_8h_a620bef0657f3212d24ef83c0568284c3}{}\label{can__drv_8h_a620bef0657f3212d24ef83c0568284c3}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+\+C\+R\+C\+\_\+\+E\+R\+R\+OR@{M\+O\+B\+\_\+\+C\+R\+C\+\_\+\+E\+R\+R\+OR}}
+\index{M\+O\+B\+\_\+\+C\+R\+C\+\_\+\+E\+R\+R\+OR@{M\+O\+B\+\_\+\+C\+R\+C\+\_\+\+E\+R\+R\+OR}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+B\+\_\+\+C\+R\+C\+\_\+\+E\+R\+R\+OR}{MOB_CRC_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+B\+\_\+\+C\+R\+C\+\_\+\+E\+R\+R\+OR~(1$<$$<$C\+E\+RR)}\hypertarget{can__drv_8h_ac788511a4773e1a74a8e0155022151a5}{}\label{can__drv_8h_ac788511a4773e1a74a8e0155022151a5}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+\+D\+I\+S\+A\+B\+LE@{M\+O\+B\+\_\+\+D\+I\+S\+A\+B\+LE}}
+\index{M\+O\+B\+\_\+\+D\+I\+S\+A\+B\+LE@{M\+O\+B\+\_\+\+D\+I\+S\+A\+B\+LE}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+B\+\_\+\+D\+I\+S\+A\+B\+LE}{MOB_DISABLE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+B\+\_\+\+D\+I\+S\+A\+B\+LE~0x\+FF}\hypertarget{can__drv_8h_a2a2e3b4caa9d8ea5fb582090bf8f4233}{}\label{can__drv_8h_a2a2e3b4caa9d8ea5fb582090bf8f4233}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR@{M\+O\+B\+\_\+\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR}}
+\index{M\+O\+B\+\_\+\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR@{M\+O\+B\+\_\+\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+B\+\_\+\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR}{MOB_FORM_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+B\+\_\+\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR~(1$<$$<$F\+E\+RR)}\hypertarget{can__drv_8h_ab0fd76214f7907d4674b10cb39031197}{}\label{can__drv_8h_ab0fd76214f7907d4674b10cb39031197}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+\+N\+O\+T\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED@{M\+O\+B\+\_\+\+N\+O\+T\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED}}
+\index{M\+O\+B\+\_\+\+N\+O\+T\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED@{M\+O\+B\+\_\+\+N\+O\+T\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+B\+\_\+\+N\+O\+T\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED}{MOB_NOT_COMPLETED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+B\+\_\+\+N\+O\+T\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED~0x00}\hypertarget{can__drv_8h_ab95ceea45b8f637755a869fb36c7d386}{}\label{can__drv_8h_ab95ceea45b8f637755a869fb36c7d386}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+C\+H\+ED@{M\+O\+B\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+C\+H\+ED}}
+\index{M\+O\+B\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+C\+H\+ED@{M\+O\+B\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+C\+H\+ED}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+B\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+C\+H\+ED}{MOB_NOT_REACHED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+B\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+C\+H\+ED~((1$<$$<$A\+E\+RR)$\vert$(1$<$$<$F\+E\+RR)$\vert$(1$<$$<$C\+E\+RR)$\vert$(1$<$$<$S\+E\+RR)$\vert$(1$<$$<$B\+E\+RR))}\hypertarget{can__drv_8h_a1d5700e77a20da7ea548c68f4710da15}{}\label{can__drv_8h_a1d5700e77a20da7ea548c68f4710da15}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+\+P\+E\+N\+D\+I\+NG@{M\+O\+B\+\_\+\+P\+E\+N\+D\+I\+NG}}
+\index{M\+O\+B\+\_\+\+P\+E\+N\+D\+I\+NG@{M\+O\+B\+\_\+\+P\+E\+N\+D\+I\+NG}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+B\+\_\+\+P\+E\+N\+D\+I\+NG}{MOB_PENDING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+B\+\_\+\+P\+E\+N\+D\+I\+NG~((1$<$$<$R\+X\+OK)$\vert$(1$<$$<$T\+X\+OK))}\hypertarget{can__drv_8h_a1818f3ec3fc6435c38114598ceae1cd3}{}\label{can__drv_8h_a1818f3ec3fc6435c38114598ceae1cd3}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+\+Rx\+\_\+\+B\+E\+NA@{M\+O\+B\+\_\+\+Rx\+\_\+\+B\+E\+NA}}
+\index{M\+O\+B\+\_\+\+Rx\+\_\+\+B\+E\+NA@{M\+O\+B\+\_\+\+Rx\+\_\+\+B\+E\+NA}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+B\+\_\+\+Rx\+\_\+\+B\+E\+NA}{MOB_Rx_BENA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+B\+\_\+\+Rx\+\_\+\+B\+E\+NA~3}\hypertarget{can__drv_8h_a3cac1d5afc24546cb42550ac92c1922c}{}\label{can__drv_8h_a3cac1d5afc24546cb42550ac92c1922c}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+\+R\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED@{M\+O\+B\+\_\+\+R\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED}}
+\index{M\+O\+B\+\_\+\+R\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED@{M\+O\+B\+\_\+\+R\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+B\+\_\+\+R\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED}{MOB_RX_COMPLETED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+B\+\_\+\+R\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED~(1$<$$<$R\+X\+OK)}\hypertarget{can__drv_8h_a5cc2b3c03d079a4ca8722e8aeeee2cae}{}\label{can__drv_8h_a5cc2b3c03d079a4ca8722e8aeeee2cae}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+\+R\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+D\+L\+CW@{M\+O\+B\+\_\+\+R\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+D\+L\+CW}}
+\index{M\+O\+B\+\_\+\+R\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+D\+L\+CW@{M\+O\+B\+\_\+\+R\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+D\+L\+CW}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+B\+\_\+\+R\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+D\+L\+CW}{MOB_RX_COMPLETED_DLCW}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+B\+\_\+\+R\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+D\+L\+CW~((1$<$$<$R\+X\+OK)$\vert$(1$<$$<$D\+L\+CW))}\hypertarget{can__drv_8h_a75c13478f7bf4172a67d2c40f93b5507}{}\label{can__drv_8h_a75c13478f7bf4172a67d2c40f93b5507}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+\+Rx\+\_\+\+E\+NA@{M\+O\+B\+\_\+\+Rx\+\_\+\+E\+NA}}
+\index{M\+O\+B\+\_\+\+Rx\+\_\+\+E\+NA@{M\+O\+B\+\_\+\+Rx\+\_\+\+E\+NA}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+B\+\_\+\+Rx\+\_\+\+E\+NA}{MOB_Rx_ENA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+B\+\_\+\+Rx\+\_\+\+E\+NA~2}\hypertarget{can__drv_8h_a05ffc172688ca50cef457f5c84c41829}{}\label{can__drv_8h_a05ffc172688ca50cef457f5c84c41829}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+\+S\+T\+U\+F\+F\+\_\+\+E\+R\+R\+OR@{M\+O\+B\+\_\+\+S\+T\+U\+F\+F\+\_\+\+E\+R\+R\+OR}}
+\index{M\+O\+B\+\_\+\+S\+T\+U\+F\+F\+\_\+\+E\+R\+R\+OR@{M\+O\+B\+\_\+\+S\+T\+U\+F\+F\+\_\+\+E\+R\+R\+OR}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+B\+\_\+\+S\+T\+U\+F\+F\+\_\+\+E\+R\+R\+OR}{MOB_STUFF_ERROR}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+B\+\_\+\+S\+T\+U\+F\+F\+\_\+\+E\+R\+R\+OR~(1$<$$<$S\+E\+RR)}\hypertarget{can__drv_8h_af011564b3b88bd8f11e3ed571bfb78c9}{}\label{can__drv_8h_af011564b3b88bd8f11e3ed571bfb78c9}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+\+T\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED@{M\+O\+B\+\_\+\+T\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED}}
+\index{M\+O\+B\+\_\+\+T\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED@{M\+O\+B\+\_\+\+T\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+B\+\_\+\+T\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED}{MOB_TX_COMPLETED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+B\+\_\+\+T\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED~(1$<$$<$T\+X\+OK)}\hypertarget{can__drv_8h_a9b1b6e37b832481356a9697ee6d46564}{}\label{can__drv_8h_a9b1b6e37b832481356a9697ee6d46564}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+\+Tx\+\_\+\+E\+NA@{M\+O\+B\+\_\+\+Tx\+\_\+\+E\+NA}}
+\index{M\+O\+B\+\_\+\+Tx\+\_\+\+E\+NA@{M\+O\+B\+\_\+\+Tx\+\_\+\+E\+NA}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+B\+\_\+\+Tx\+\_\+\+E\+NA}{MOB_Tx_ENA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+B\+\_\+\+Tx\+\_\+\+E\+NA~1}\hypertarget{can__drv_8h_ac8951e65f8e3fc0b571909eac77f7459}{}\label{can__drv_8h_ac8951e65f8e3fc0b571909eac77f7459}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+N\+B\+\_\+\+M\+SK@{M\+O\+B\+N\+B\+\_\+\+M\+SK}}
+\index{M\+O\+B\+N\+B\+\_\+\+M\+SK@{M\+O\+B\+N\+B\+\_\+\+M\+SK}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{M\+O\+B\+N\+B\+\_\+\+M\+SK}{MOBNB_MSK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+O\+B\+N\+B\+\_\+\+M\+SK~((1$<$$<$M\+O\+B\+N\+B3)$\vert$(1$<$$<$M\+O\+B\+N\+B2)$\vert$(1$<$$<$M\+O\+B\+N\+B1)$\vert$(1$<$$<$M\+O\+B\+N\+B0))}\hypertarget{can__drv_8h_ad579957283d2c1a95a7bb74f2505032c}{}\label{can__drv_8h_ad579957283d2c1a95a7bb74f2505032c}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!N\+B\+\_\+\+D\+A\+T\+A\+\_\+\+M\+AX@{N\+B\+\_\+\+D\+A\+T\+A\+\_\+\+M\+AX}}
+\index{N\+B\+\_\+\+D\+A\+T\+A\+\_\+\+M\+AX@{N\+B\+\_\+\+D\+A\+T\+A\+\_\+\+M\+AX}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{N\+B\+\_\+\+D\+A\+T\+A\+\_\+\+M\+AX}{NB_DATA_MAX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+B\+\_\+\+D\+A\+T\+A\+\_\+\+M\+AX~8}\hypertarget{can__drv_8h_ae0293a7870f16cf76ee18327d125c548}{}\label{can__drv_8h_ae0293a7870f16cf76ee18327d125c548}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!N\+B\+\_\+\+M\+OB@{N\+B\+\_\+\+M\+OB}}
+\index{N\+B\+\_\+\+M\+OB@{N\+B\+\_\+\+M\+OB}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{N\+B\+\_\+\+M\+OB}{NB_MOB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+B\+\_\+\+M\+OB~6}\hypertarget{can__drv_8h_a27155aadcdf8ed5c0d1fa24a463063f1}{}\label{can__drv_8h_a27155aadcdf8ed5c0d1fa24a463063f1}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!N\+O\+\_\+\+M\+OB@{N\+O\+\_\+\+M\+OB}}
+\index{N\+O\+\_\+\+M\+OB@{N\+O\+\_\+\+M\+OB}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{N\+O\+\_\+\+M\+OB}{NO_MOB}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+O\+\_\+\+M\+OB~0x\+FF}\hypertarget{can__drv_8h_a6b5e49634f5bf3b2aeeb57f3c187833d}{}\label{can__drv_8h_a6b5e49634f5bf3b2aeeb57f3c187833d}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!N\+T\+Q\+\_\+\+M\+AX@{N\+T\+Q\+\_\+\+M\+AX}}
+\index{N\+T\+Q\+\_\+\+M\+AX@{N\+T\+Q\+\_\+\+M\+AX}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{N\+T\+Q\+\_\+\+M\+AX}{NTQ_MAX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+T\+Q\+\_\+\+M\+AX~25}\hypertarget{can__drv_8h_ad66de91845a9527d792e940d56679c37}{}\label{can__drv_8h_ad66de91845a9527d792e940d56679c37}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!N\+T\+Q\+\_\+\+M\+IN@{N\+T\+Q\+\_\+\+M\+IN}}
+\index{N\+T\+Q\+\_\+\+M\+IN@{N\+T\+Q\+\_\+\+M\+IN}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{N\+T\+Q\+\_\+\+M\+IN}{NTQ_MIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define N\+T\+Q\+\_\+\+M\+IN~8}\hypertarget{can__drv_8h_adc2d9a7f940621aeda85e4c9c0653e6b}{}\label{can__drv_8h_adc2d9a7f940621aeda85e4c9c0653e6b}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!P\+H\+S1@{P\+H\+S1}}
+\index{P\+H\+S1@{P\+H\+S1}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{P\+H\+S1}{PHS1}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+H\+S1~(P\+H\+S10)}\hypertarget{can__drv_8h_a6df9b6fcdca37119366e0e8edf56da21}{}\label{can__drv_8h_a6df9b6fcdca37119366e0e8edf56da21}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!P\+H\+S1\+\_\+\+M\+AX@{P\+H\+S1\+\_\+\+M\+AX}}
+\index{P\+H\+S1\+\_\+\+M\+AX@{P\+H\+S1\+\_\+\+M\+AX}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{P\+H\+S1\+\_\+\+M\+AX}{PHS1_MAX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+H\+S1\+\_\+\+M\+AX~8}\hypertarget{can__drv_8h_a4399a478e1e3f618647499408a3a0ab6}{}\label{can__drv_8h_a4399a478e1e3f618647499408a3a0ab6}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!P\+H\+S1\+\_\+\+M\+IN@{P\+H\+S1\+\_\+\+M\+IN}}
+\index{P\+H\+S1\+\_\+\+M\+IN@{P\+H\+S1\+\_\+\+M\+IN}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{P\+H\+S1\+\_\+\+M\+IN}{PHS1_MIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+H\+S1\+\_\+\+M\+IN~2}\hypertarget{can__drv_8h_a76a9058a75b89db1f8757cb0f7da8c98}{}\label{can__drv_8h_a76a9058a75b89db1f8757cb0f7da8c98}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!P\+H\+S1\+\_\+\+M\+SK@{P\+H\+S1\+\_\+\+M\+SK}}
+\index{P\+H\+S1\+\_\+\+M\+SK@{P\+H\+S1\+\_\+\+M\+SK}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{P\+H\+S1\+\_\+\+M\+SK}{PHS1_MSK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+H\+S1\+\_\+\+M\+SK~((1$<$$<$P\+H\+S12)$\vert$(1$<$$<$P\+H\+S11)$\vert$(1$<$$<$P\+H\+S10))}\hypertarget{can__drv_8h_a659e017cdd8ddcd01c0793a3d49afd89}{}\label{can__drv_8h_a659e017cdd8ddcd01c0793a3d49afd89}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!P\+H\+S2@{P\+H\+S2}}
+\index{P\+H\+S2@{P\+H\+S2}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{P\+H\+S2}{PHS2}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+H\+S2~(P\+H\+S20)}\hypertarget{can__drv_8h_a80eef39659fcd797fde32bfe561fdacc}{}\label{can__drv_8h_a80eef39659fcd797fde32bfe561fdacc}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!P\+H\+S2\+\_\+\+M\+AX@{P\+H\+S2\+\_\+\+M\+AX}}
+\index{P\+H\+S2\+\_\+\+M\+AX@{P\+H\+S2\+\_\+\+M\+AX}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{P\+H\+S2\+\_\+\+M\+AX}{PHS2_MAX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+H\+S2\+\_\+\+M\+AX~8}\hypertarget{can__drv_8h_ae6625573c5aa592a5c4cea9aaa1e5d3a}{}\label{can__drv_8h_ae6625573c5aa592a5c4cea9aaa1e5d3a}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!P\+H\+S2\+\_\+\+M\+IN@{P\+H\+S2\+\_\+\+M\+IN}}
+\index{P\+H\+S2\+\_\+\+M\+IN@{P\+H\+S2\+\_\+\+M\+IN}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{P\+H\+S2\+\_\+\+M\+IN}{PHS2_MIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+H\+S2\+\_\+\+M\+IN~2}\hypertarget{can__drv_8h_a4135e9fc31e32a4c2fff23e10ebd32fc}{}\label{can__drv_8h_a4135e9fc31e32a4c2fff23e10ebd32fc}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!P\+H\+S2\+\_\+\+M\+SK@{P\+H\+S2\+\_\+\+M\+SK}}
+\index{P\+H\+S2\+\_\+\+M\+SK@{P\+H\+S2\+\_\+\+M\+SK}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{P\+H\+S2\+\_\+\+M\+SK}{PHS2_MSK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+H\+S2\+\_\+\+M\+SK~((1$<$$<$P\+H\+S22)$\vert$(1$<$$<$P\+H\+S21)$\vert$(1$<$$<$P\+H\+S20))}\hypertarget{can__drv_8h_a7b9077126e5b4e4b5f05378cc127880d}{}\label{can__drv_8h_a7b9077126e5b4e4b5f05378cc127880d}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!P\+RS@{P\+RS}}
+\index{P\+RS@{P\+RS}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{P\+RS}{PRS}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+RS~(P\+R\+S0)}\hypertarget{can__drv_8h_a8397acedb06c1832f583d8660807e826}{}\label{can__drv_8h_a8397acedb06c1832f583d8660807e826}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!P\+R\+S\+\_\+\+M\+AX@{P\+R\+S\+\_\+\+M\+AX}}
+\index{P\+R\+S\+\_\+\+M\+AX@{P\+R\+S\+\_\+\+M\+AX}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{P\+R\+S\+\_\+\+M\+AX}{PRS_MAX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+S\+\_\+\+M\+AX~8}\hypertarget{can__drv_8h_a6ba0bad4a3a447e01277aa0a0278b5c7}{}\label{can__drv_8h_a6ba0bad4a3a447e01277aa0a0278b5c7}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!P\+R\+S\+\_\+\+M\+IN@{P\+R\+S\+\_\+\+M\+IN}}
+\index{P\+R\+S\+\_\+\+M\+IN@{P\+R\+S\+\_\+\+M\+IN}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{P\+R\+S\+\_\+\+M\+IN}{PRS_MIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+S\+\_\+\+M\+IN~1}\hypertarget{can__drv_8h_a74ec0e95334cc33f8518a5c412200994}{}\label{can__drv_8h_a74ec0e95334cc33f8518a5c412200994}
+
+
+True segment values in TQ. 
+
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!P\+R\+S\+\_\+\+M\+SK@{P\+R\+S\+\_\+\+M\+SK}}
+\index{P\+R\+S\+\_\+\+M\+SK@{P\+R\+S\+\_\+\+M\+SK}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{P\+R\+S\+\_\+\+M\+SK}{PRS_MSK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define P\+R\+S\+\_\+\+M\+SK~((1$<$$<$P\+R\+S2)$\vert$(1$<$$<$P\+R\+S1)$\vert$(1$<$$<$P\+R\+S0))}\hypertarget{can__drv_8h_ac45ed4d130f51df054c7918732fce2aa}{}\label{can__drv_8h_ac45ed4d130f51df054c7918732fce2aa}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!S\+JW@{S\+JW}}
+\index{S\+JW@{S\+JW}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{S\+JW}{SJW}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+JW~(S\+J\+W0)}\hypertarget{can__drv_8h_a2d7ea218e18cf936afd6b11ea0478913}{}\label{can__drv_8h_a2d7ea218e18cf936afd6b11ea0478913}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!S\+J\+W\+\_\+\+M\+AX@{S\+J\+W\+\_\+\+M\+AX}}
+\index{S\+J\+W\+\_\+\+M\+AX@{S\+J\+W\+\_\+\+M\+AX}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{S\+J\+W\+\_\+\+M\+AX}{SJW_MAX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+J\+W\+\_\+\+M\+AX~4}\hypertarget{can__drv_8h_ae9d138cf098144036263c3a83bcd234f}{}\label{can__drv_8h_ae9d138cf098144036263c3a83bcd234f}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!S\+J\+W\+\_\+\+M\+IN@{S\+J\+W\+\_\+\+M\+IN}}
+\index{S\+J\+W\+\_\+\+M\+IN@{S\+J\+W\+\_\+\+M\+IN}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{S\+J\+W\+\_\+\+M\+IN}{SJW_MIN}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+J\+W\+\_\+\+M\+IN~1}\hypertarget{can__drv_8h_a0187cf5872d395128527ebb5767493f4}{}\label{can__drv_8h_a0187cf5872d395128527ebb5767493f4}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!S\+J\+W\+\_\+\+M\+SK@{S\+J\+W\+\_\+\+M\+SK}}
+\index{S\+J\+W\+\_\+\+M\+SK@{S\+J\+W\+\_\+\+M\+SK}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{S\+J\+W\+\_\+\+M\+SK}{SJW_MSK}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+J\+W\+\_\+\+M\+SK~((1$<$$<$S\+J\+W1)$\vert$(1$<$$<$S\+J\+W0))}\hypertarget{can__drv_8h_a83d41a9956853eefcdd06e998bb8d161}{}\label{can__drv_8h_a83d41a9956853eefcdd06e998bb8d161}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!S\+T\+A\+T\+U\+S\+\_\+\+C\+L\+E\+A\+R\+ED@{S\+T\+A\+T\+U\+S\+\_\+\+C\+L\+E\+A\+R\+ED}}
+\index{S\+T\+A\+T\+U\+S\+\_\+\+C\+L\+E\+A\+R\+ED@{S\+T\+A\+T\+U\+S\+\_\+\+C\+L\+E\+A\+R\+ED}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{S\+T\+A\+T\+U\+S\+\_\+\+C\+L\+E\+A\+R\+ED}{STATUS_CLEARED}}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+T\+A\+T\+U\+S\+\_\+\+C\+L\+E\+A\+R\+ED~0x00}\hypertarget{can__drv_8h_ac6dc80303c26062de916959ca5a76a4f}{}\label{can__drv_8h_ac6dc80303c26062de916959ca5a76a4f}
+
+
+\subsection{Enumeration Type Documentation}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!can\+\_\+mob\+\_\+t@{can\+\_\+mob\+\_\+t}}
+\index{can\+\_\+mob\+\_\+t@{can\+\_\+mob\+\_\+t}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{can\+\_\+mob\+\_\+t}{can_mob_t}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf can\+\_\+mob\+\_\+t}}\hypertarget{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8}{}\label{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{M\+O\+B\+\_\+0@{M\+O\+B\+\_\+0}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+0@{M\+O\+B\+\_\+0}}\item[{\em 
+M\+O\+B\+\_\+0\hypertarget{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8a51f8691e3e21ea1ae6c24375b7dad9e3}{}\label{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8a51f8691e3e21ea1ae6c24375b7dad9e3}
+}]\index{M\+O\+B\+\_\+1@{M\+O\+B\+\_\+1}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+1@{M\+O\+B\+\_\+1}}\item[{\em 
+M\+O\+B\+\_\+1\hypertarget{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8a395753ce0b07adf5c92e16d24b9f68c3}{}\label{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8a395753ce0b07adf5c92e16d24b9f68c3}
+}]\index{M\+O\+B\+\_\+2@{M\+O\+B\+\_\+2}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+2@{M\+O\+B\+\_\+2}}\item[{\em 
+M\+O\+B\+\_\+2\hypertarget{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8a7549439edf56cab7578b147de3ee44cb}{}\label{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8a7549439edf56cab7578b147de3ee44cb}
+}]\index{M\+O\+B\+\_\+3@{M\+O\+B\+\_\+3}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+3@{M\+O\+B\+\_\+3}}\item[{\em 
+M\+O\+B\+\_\+3\hypertarget{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8aefde97d6b6912ec15576b43436413fee}{}\label{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8aefde97d6b6912ec15576b43436413fee}
+}]\index{M\+O\+B\+\_\+4@{M\+O\+B\+\_\+4}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+4@{M\+O\+B\+\_\+4}}\item[{\em 
+M\+O\+B\+\_\+4\hypertarget{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8a011e6b1187ab1b3bee7279a319854964}{}\label{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8a011e6b1187ab1b3bee7279a319854964}
+}]\index{M\+O\+B\+\_\+5@{M\+O\+B\+\_\+5}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!M\+O\+B\+\_\+5@{M\+O\+B\+\_\+5}}\item[{\em 
+M\+O\+B\+\_\+5\hypertarget{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8accad644029ff9fa6aabac44bdab464c5}{}\label{can__drv_8h_a8968fe031863784dde1c02abcf0c4eb8accad644029ff9fa6aabac44bdab464c5}
+}]\end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!can\+\_\+auto\+\_\+baudrate@{can\+\_\+auto\+\_\+baudrate}}
+\index{can\+\_\+auto\+\_\+baudrate@{can\+\_\+auto\+\_\+baudrate}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{can\+\_\+auto\+\_\+baudrate(uint8\+\_\+t eval)}{can_auto_baudrate(uint8_t eval)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t can\+\_\+auto\+\_\+baudrate (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{can__drv_8h_a7c6d84925ce34b51e94b2da87bb404bf}{}\label{can__drv_8h_a7c6d84925ce34b51e94b2da87bb404bf}
+This function programs itself the C\+A\+N\+B\+Tx registers if there is some communication (activity) on the C\+AN bus.
+
+\begin{DoxyWarning}{Warning}
+complex function not yet implemented
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em Evaluation} & needed ==0\+: start the evaluation from faster baudrate ==1\+: (re)start an evaluation with C\+A\+N\+B\+Tx registers contents\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Baudrate Status ==0\+: research of bit timing configuration failed ==1\+: baudrate performed 
+\end{DoxyReturn}
+Temporary variable
+
+Bit timing segment variables
+
+Computing needed
+
+Keys for \char`\"{}while()\char`\"{} loops
+
+Key for configurate C\+AN
+
+Timer overflow count
+
+Count of bit timing configuration tried
+
+Return flag
+
+--- Default setting
+
+--- Init segment variables with M\+IN values if mode=0 or init segment variables with C\+A\+N\+B\+Tx if mode=1
+
+Try this configuration
+
+Enable \char`\"{}while (wait\+\_\+for\+\_\+rx ...\char`\"{} loop
+
+mode = 1
+
+To enter in \char`\"{}while (evaluate ...\char`\"{} loop
+
+Look for the next configuration
+
+Skip \char`\"{}while (wait\+\_\+for\+\_\+rx ...\char`\"{} loop
+
+--- Clear all M\+Ob\textquotesingle{}s (C\+A\+N\+M\+SG not cleared)
+
+Page index
+
+All M\+Ob Registers = 0x00
+
+--- C\+A\+N\+B\+Tx registers update (sjw = phs2/2, 3 sample points)
+
+--- Set C\+A\+N-\/\+Timer -\/ Used for time-\/out There are 641 (0x281) possible evaluations. The first one provides the faster the faster bit timing, the last one gives the slower. It is necessary to modulate the time-\/out versus bit timing (0x281$>$$>$3=0x50, matching an U8).
+
+--- M\+Ob configuration
+
+Use M\+Ob-\/0
+
+Reset M\+Ob status (undone by \char`\"{}\+Can\+\_\+reset()\char`\"{})
+
+M\+Ob 0 in receive mode
+
+C\+AN controller configuration
+
+Enable C\+AN controller in \char`\"{}listen\char`\"{} mode
+
+Wait for Enable OK
+
+Reset General errors and O\+V\+R\+T\+IM flag
+
+\subsection*{--- W\+A\+I\+T\+\_\+\+F\+O\+R\+\_\+\+RX L\+O\+OP\+: }
+
+Try to perform a C\+AN message reception in \char`\"{}\+L\+I\+S\+T\+E\+N\char`\"{} mode without error and before a time\+\_\+out done by C\+A\+N-\/\+Timer. Else gives the hand to \char`\"{}\+E\+V\+A\+L\+U\+A\+T\+E L\+O\+O\+P\char`\"{} to have a new set of bit timing.
+
+--- Rx\+OK received ?
+
+--- It is the successful output of \char`\"{}can\+\_\+auto\+\_\+baudrate\char`\"{} function
+
+Out of \char`\"{}while (wait\+\_\+for\+\_\+rx ...\char`\"{} loop
+
+Will skip \char`\"{}while (evaluate ...\char`\"{} loop
+
+Out of \char`\"{}while (bt\+\_\+not\+\_\+found ...\char`\"{} loop
+
+Return flag = T\+R\+UE
+
+Disable M\+Ob-\/0
+
+Disable C\+AN controller \& reset \char`\"{}listen\char`\"{} mode
+
+Wait for Disable OK
+
+--- Else stop if any errors
+
+--- M\+Ob error ?
+
+Will enter in \char`\"{}while (evaluate ...\char`\"{} loop
+
+Out of \char`\"{}while (wait\+\_\+for\+\_\+rx ...\char`\"{} loop
+
+--- Time\+\_\+out reached ?
+
+--- First Time\+\_\+out
+
+--- Second Time\+\_\+out
+
+Will enter in \char`\"{}while (evaluate ...\char`\"{} loop
+
+Out of \char`\"{}while (wait\+\_\+for\+\_\+rx ...\char`\"{} loop
+
+--- General error ?
+
+Will enter in \char`\"{}while (evaluate ...\char`\"{} loop
+
+Out of \char`\"{}while (wait\+\_\+for\+\_\+rx ...\char`\"{} loop
+
+Try this configuration
+
+\subsection*{--- E\+V\+A\+L\+U\+A\+TE L\+O\+OP\+: }
+
+Compute a new bit timing configuration. First, Phase 1 is increased, then Phase2=Phase1 and if Phase1$>$5, Phase1 can be equal to Phase2 or Phase2+1. After this, the number of TQ is increased up to its high limit and after it is the Prescaler. During the computing high (80\%) and low (75\%) limits of sampling point location are tested. S\+JW and the number of sampling points are not calculated in this loop.
+
+--- It is the failing of \char`\"{}can\+\_\+auto\+\_\+baudrate\char`\"{} function
+
+Out of \char`\"{}while (evaluate ...\char`\"{} loop
+
+Return flag = F\+A\+L\+SE
+
+Out of \char`\"{}while (bt\+\_\+not\+\_\+found ...\char`\"{} loop
+
+Disable M\+Ob-\/0
+
+Disable C\+AN controller \& reset \char`\"{}listen\char`\"{} mode
+
+Wait for Disable OK
+
+--- If psh1 $>$ 5 then phs1 =phs2 or =phs2+1, else phs1=phs2
+
+--- Test P\+RS limits
+
+--- Values accepted if 80\% $>$= sampling point $>$= 75\%
+
+Out of \char`\"{}while (evaluate ...\char`\"{} loop \&
+
+new \char`\"{}while (bt\+\_\+not\+\_\+found ...\char`\"{} loop \index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!can\+\_\+clear\+\_\+all\+\_\+mob@{can\+\_\+clear\+\_\+all\+\_\+mob}}
+\index{can\+\_\+clear\+\_\+all\+\_\+mob@{can\+\_\+clear\+\_\+all\+\_\+mob}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{can\+\_\+clear\+\_\+all\+\_\+mob(void)}{can_clear_all_mob(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void can\+\_\+clear\+\_\+all\+\_\+mob (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{can__drv_8h_ab057df44a5e3dea2661b0b429730a1aa}{}\label{can__drv_8h_ab057df44a5e3dea2661b0b429730a1aa}
+This function clears the Mailbox content. It uses \hyperlink{can__drv_8h_a2a8afc214c9e25a420b75ac5a686530d}{Can\+\_\+clear\+\_\+mob()} macro and clears data F\+I\+FO o M\+Ob\mbox{[}0\mbox{]} upto M\+Ob\mbox{[}L\+A\+S\+T\+\_\+\+M\+O\+B\+\_\+\+NB\mbox{]}.
+
+\begin{DoxyWarning}{Warning}
+none.
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em none.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none.
+\end{DoxyReturn}
+This function clears the Mailbox content. It reset C\+A\+N\+S\+T\+M\+OB, C\+A\+N\+C\+D\+M\+OB, C\+A\+N\+I\+D\+Tx \& C\+A\+N\+I\+D\+Mx and clears data F\+I\+FO of M\+Ob\mbox{[}0\mbox{]} upto M\+Ob\mbox{[}L\+A\+S\+T\+\_\+\+M\+O\+B\+\_\+\+NB\mbox{]}.
+
+\begin{DoxyWarning}{Warning}
+\+: This version doesn\textquotesingle{}t clears the data F\+I\+FO
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Page index
+
+All M\+Ob Registers=0 \index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!can\+\_\+fixed\+\_\+baudrate@{can\+\_\+fixed\+\_\+baudrate}}
+\index{can\+\_\+fixed\+\_\+baudrate@{can\+\_\+fixed\+\_\+baudrate}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{can\+\_\+fixed\+\_\+baudrate(uint8\+\_\+t eval)}{can_fixed_baudrate(uint8_t eval)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t can\+\_\+fixed\+\_\+baudrate (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{can__drv_8h_ad18c9a425ec3655833b260f1c6213969}{}\label{can__drv_8h_ad18c9a425ec3655833b260f1c6213969}
+This function programs the C\+A\+N\+B\+Tx registers with the predefined values C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T1, C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T2, C\+O\+N\+F\+\_\+\+C\+A\+N\+B\+T3.
+
+\begin{DoxyWarning}{Warning}
+
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em (unused!)} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Baudrate Status fixed = 1\+: baudrate performed 
+\end{DoxyReturn}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!can\+\_\+get\+\_\+data@{can\+\_\+get\+\_\+data}}
+\index{can\+\_\+get\+\_\+data@{can\+\_\+get\+\_\+data}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{can\+\_\+get\+\_\+data(uint8\+\_\+t $\ast$p\+\_\+can\+\_\+message\+\_\+data)}{can_get_data(uint8_t *p_can_message_data)}}]{\setlength{\rightskip}{0pt plus 5cm}void can\+\_\+get\+\_\+data (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t $\ast$}]{p\+\_\+can\+\_\+message\+\_\+data}
+\end{DoxyParamCaption}
+)}\hypertarget{can__drv_8h_aad3171662b568a0f5fdd7f7cf4ab1ef5}{}\label{can__drv_8h_aad3171662b568a0f5fdd7f7cf4ab1ef5}
+This function copy the data from the selected M\+Ob to the address passed as parameter.
+
+\begin{DoxyWarning}{Warning}
+none.
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em C\+AN} & message data address.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+\index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!can\+\_\+get\+\_\+mob\+\_\+free@{can\+\_\+get\+\_\+mob\+\_\+free}}
+\index{can\+\_\+get\+\_\+mob\+\_\+free@{can\+\_\+get\+\_\+mob\+\_\+free}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{can\+\_\+get\+\_\+mob\+\_\+free(void)}{can_get_mob_free(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t can\+\_\+get\+\_\+mob\+\_\+free (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{can__drv_8h_a99a793e524da33da28de3286bc5c0e48}{}\label{can__drv_8h_a99a793e524da33da28de3286bc5c0e48}
+This function returns the number of the first M\+Ob available or 0x\+FF if no M\+Ob available.
+
+\begin{DoxyWarning}{Warning}
+none.
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em none.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Handle of M\+Ob.
+\begin{DoxyItemize}
+\item M\+Ob\mbox{[}0\mbox{]} upto M\+Ob\mbox{[}L\+A\+S\+T\+\_\+\+M\+O\+B\+\_\+\+NB\mbox{]}
+\item 0x\+FF if no M\+Ob
+\end{DoxyItemize}
+\end{DoxyReturn}
+This function returns the number of the first M\+Ob available or 0x\+FF if no M\+Ob is available.
+
+\begin{DoxyWarning}{Warning}
+none.
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em none.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Handle of M\+Ob.
+\begin{DoxyItemize}
+\item M\+Ob\mbox{[}0\mbox{]} upto M\+Ob\mbox{[}L\+A\+S\+T\+\_\+\+M\+O\+B\+\_\+\+NB\mbox{]}
+\item 0x\+FF if no M\+Ob 
+\end{DoxyItemize}
+\end{DoxyReturn}
+Disable configuration \index{can\+\_\+drv.\+h@{can\+\_\+drv.\+h}!can\+\_\+get\+\_\+mob\+\_\+status@{can\+\_\+get\+\_\+mob\+\_\+status}}
+\index{can\+\_\+get\+\_\+mob\+\_\+status@{can\+\_\+get\+\_\+mob\+\_\+status}!can\+\_\+drv.\+h@{can\+\_\+drv.\+h}}
+\subsubsection[{\texorpdfstring{can\+\_\+get\+\_\+mob\+\_\+status(void)}{can_get_mob_status(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t can\+\_\+get\+\_\+mob\+\_\+status (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{can__drv_8h_a6f2df23760580211e644a786e5f8fccb}{}\label{can__drv_8h_a6f2df23760580211e644a786e5f8fccb}
+This function returns information \char`\"{}\+M\+O\+B completed its job\char`\"{} if one of the R\+X\+OK or T\+X\+OK Flag is set or "M\+OB not completed its job if no R\+X\+OK and T\+X\+OK flags are set. Previously, this function checks if the M\+Ob is configured or not and in case of the M\+OB not configured, the function returns \char`\"{}\+M\+O\+B\+\_\+\+D\+I\+S\+A\+B\+L\+E\char`\"{}.
+
+\begin{DoxyWarning}{Warning}
+none.
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em none.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+M\+Ob Status.
+\begin{DoxyItemize}
+\item M\+O\+B\+\_\+\+N\+O\+T\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED
+\item M\+O\+B\+\_\+\+T\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED
+\item M\+O\+B\+\_\+\+R\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED
+\item M\+O\+B\+\_\+\+R\+X\+\_\+\+D\+L\+C\+\_\+\+W\+A\+R\+N\+I\+NG
+\item M\+O\+B\+\_\+\+D\+I\+S\+A\+B\+LE or should be a combination of the following errors
+\item M\+O\+B\+\_\+\+A\+C\+K\+\_\+\+E\+R\+R\+OR
+\item M\+O\+B\+\_\+\+F\+O\+R\+M\+\_\+\+E\+R\+R\+OR
+\item M\+O\+B\+\_\+\+C\+R\+C\+\_\+\+E\+R\+R\+OR
+\item M\+O\+B\+\_\+\+S\+T\+U\+F\+F\+\_\+\+E\+R\+R\+OR
+\item M\+O\+B\+\_\+\+B\+I\+T\+\_\+\+E\+R\+R\+OR 
+\end{DoxyItemize}
+\end{DoxyReturn}

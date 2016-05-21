@@ -1,0 +1,71 @@
+\hypertarget{can__lib_8c}{}\section{can\+\_\+lib.\+c File Reference}
+\label{can__lib_8c}\index{can\+\_\+lib.\+c@{can\+\_\+lib.\+c}}
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}can\+\_\+lib.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}can\+\_\+drv.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{can__lib_8c_a5339778a7fea31b3c71ef0cf756f2bd6}{can\+\_\+init} (uint8\+\_\+t mode)
+\item 
+uint8\+\_\+t \hyperlink{can__lib_8c_a3732439d314a8e96e1b35c840774d76c}{can\+\_\+cmd} (\hyperlink{structst__cmd__t}{st\+\_\+cmd\+\_\+t} $\ast$cmd)
+\item 
+uint8\+\_\+t \hyperlink{can__lib_8c_a8fbb46e7e88e03c41dbd0fb04a19f485}{can\+\_\+get\+\_\+status} (\hyperlink{structst__cmd__t}{st\+\_\+cmd\+\_\+t} $\ast$cmd)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{can\+\_\+lib.\+c@{can\+\_\+lib.\+c}!can\+\_\+cmd@{can\+\_\+cmd}}
+\index{can\+\_\+cmd@{can\+\_\+cmd}!can\+\_\+lib.\+c@{can\+\_\+lib.\+c}}
+\subsubsection[{\texorpdfstring{can\+\_\+cmd(st\+\_\+cmd\+\_\+t $\ast$cmd)}{can_cmd(st_cmd_t *cmd)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t can\+\_\+cmd (
+\begin{DoxyParamCaption}
+\item[{{\bf st\+\_\+cmd\+\_\+t} $\ast$}]{cmd}
+\end{DoxyParamCaption}
+)}\hypertarget{can__lib_8c_a3732439d314a8e96e1b35c840774d76c}{}\label{can__lib_8c_a3732439d314a8e96e1b35c840774d76c}
+This function takes a C\+AN descriptor, analyses the action to do\+: transmit, receive or abort. This function returns a status (C\+A\+N\+\_\+\+C\+M\+D\+\_\+\+A\+C\+C\+E\+P\+T\+ED or C\+A\+N\+\_\+\+C\+M\+D\+\_\+\+R\+E\+F\+U\+S\+ED) if a M\+Ob for Rx or Tx has been found. If no M\+OB has been found, the application must be retry at a later date. This function also updates the C\+AN descriptor status (M\+O\+B\+\_\+\+P\+E\+N\+D\+I\+NG or M\+O\+B\+\_\+\+N\+O\+T\+\_\+\+R\+E\+A\+C\+H\+ED) if a M\+Ob for Rx or Tx has been found. If aborting is performed, the C\+AN descriptor status will be set to S\+T\+A\+T\+U\+S\+\_\+\+C\+L\+E\+A\+R\+ED.
+
+
+\begin{DoxyParams}{Parameters}
+{\em st\+\_\+cmd\+\_\+t$\ast$} & -\/ Can\+\_\+descriptor pointer on C\+AN descriptor structure to select the action to do.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+C\+A\+N\+\_\+\+C\+M\+D\+\_\+\+A\+C\+C\+E\+P\+T\+ED -\/ command is accepted C\+A\+N\+\_\+\+C\+M\+D\+\_\+\+R\+E\+F\+U\+S\+ED -\/ command is refused 
+\end{DoxyReturn}
+\index{can\+\_\+lib.\+c@{can\+\_\+lib.\+c}!can\+\_\+get\+\_\+status@{can\+\_\+get\+\_\+status}}
+\index{can\+\_\+get\+\_\+status@{can\+\_\+get\+\_\+status}!can\+\_\+lib.\+c@{can\+\_\+lib.\+c}}
+\subsubsection[{\texorpdfstring{can\+\_\+get\+\_\+status(st\+\_\+cmd\+\_\+t $\ast$cmd)}{can_get_status(st_cmd_t *cmd)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t can\+\_\+get\+\_\+status (
+\begin{DoxyParamCaption}
+\item[{{\bf st\+\_\+cmd\+\_\+t} $\ast$}]{cmd}
+\end{DoxyParamCaption}
+)}\hypertarget{can__lib_8c_a8fbb46e7e88e03c41dbd0fb04a19f485}{}\label{can__lib_8c_a8fbb46e7e88e03c41dbd0fb04a19f485}
+This function allows to return if the command has been performed or not. In an reception case, all the C\+AN message is stored in the structure. This function also updates the C\+AN descriptor status (M\+O\+B\+\_\+\+T\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED, M\+O\+B\+\_\+\+R\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED, M\+O\+B\+\_\+\+R\+X\+\_\+\+C\+O\+M\+P\+L\+E\+T\+E\+D\+\_\+\+D\+L\+CW or M\+O\+B\+\_\+???\+\_\+\+E\+R\+R\+OR).
+
+
+\begin{DoxyParams}{Parameters}
+{\em st\+\_\+cmd\+\_\+t$\ast$} & pointer on C\+AN descriptor structure.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+C\+A\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED -\/ Rx or Tx is completed C\+A\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+T\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED -\/ Rx or Tx is not completed C\+A\+N\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+E\+R\+R\+OR -\/ Error in configuration or in the C\+AN communication 
+\end{DoxyReturn}
+\index{can\+\_\+lib.\+c@{can\+\_\+lib.\+c}!can\+\_\+init@{can\+\_\+init}}
+\index{can\+\_\+init@{can\+\_\+init}!can\+\_\+lib.\+c@{can\+\_\+lib.\+c}}
+\subsubsection[{\texorpdfstring{can\+\_\+init(uint8\+\_\+t mode)}{can_init(uint8_t mode)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t can\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{mode}
+\end{DoxyParamCaption}
+)}\hypertarget{can__lib_8c_a5339778a7fea31b3c71ef0cf756f2bd6}{}\label{can__lib_8c_a5339778a7fea31b3c71ef0cf756f2bd6}
+C\+AN macro initialization. Reset the C\+AN peripheral, initialize the bit timing, initialize all the registers mapped in S\+R\+AM to put M\+Obs in inactive state and enable the C\+AN macro.
+
+\begin{DoxyWarning}{Warning}
+The C\+AN macro will be enable after seen on C\+AN bus a receceive level as long as of an inter frame (hardware feature).
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em Mode} & (for \char`\"{}can\+\_\+fixed\+\_\+baudrate\char`\"{} param not used) ==0\+: start C\+AN bit timing evaluation from faster baudrate ==1\+: start C\+AN bit timing evaluation with C\+A\+N\+B\+Tx registers contents\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Baudrate Status ==0\+: research of bit timing configuration failed ==1\+: baudrate performed 
+\end{DoxyReturn}

@@ -1,0 +1,92 @@
+\hypertarget{main_8c}{}\section{main.\+c File Reference}
+\label{main_8c}\index{main.\+c@{main.\+c}}
+{\ttfamily \#include \char`\"{}config.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main_8c_ab723c5f0e9759c70ed582dfd77431ff7}{D\+A\+T\+A\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}~8
+\item 
+\#define \hyperlink{main_8c_a9399d287145fa673d60fa0e3c04d0a06}{M\+Y\+\_\+\+ID}~0x11
+\item 
+\#define \hyperlink{main_8c_a98a7fc9e93c4f05f5360cd836439964e}{M\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+S\+\_\+0}~0x79
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\item 
+void \hyperlink{main_8c_a43f5e0d6db0fb41a437cc9096b32e9b5}{system\+\_\+init} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{main_8c_acad6eebce40aff54c96c90f3d7e62c30}{adc\+Voltage} = 0
+\item 
+uint8\+\_\+t \hyperlink{main_8c_a28c4027d8db8e026202c350f790dec75}{can\+Init\+Flag}
+\item 
+uint8\+\_\+t \hyperlink{main_8c_ab04e8c47e24101e224c809f3e67c54ff}{c\+\_\+status}
+\item 
+uint8\+\_\+t \hyperlink{main_8c_a9e6b8531b307ad168a11f3388aedc03a}{can\+Data\+Buffer} \mbox{[}2\mbox{]}
+\item 
+\hyperlink{structst__cmd__t}{st\+\_\+cmd\+\_\+t} \hyperlink{main_8c_ad644d7ab54692eb2518cdf3c8da50a6f}{message}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{main.\+c@{main.\+c}!D\+A\+T\+A\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{D\+A\+T\+A\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}}
+\index{D\+A\+T\+A\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE@{D\+A\+T\+A\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{D\+A\+T\+A\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE}{DATA_BUFFER_SIZE}}]{\setlength{\rightskip}{0pt plus 5cm}\#define D\+A\+T\+A\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+S\+I\+ZE~8}\hypertarget{main_8c_ab723c5f0e9759c70ed582dfd77431ff7}{}\label{main_8c_ab723c5f0e9759c70ed582dfd77431ff7}
+\index{main.\+c@{main.\+c}!M\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+S\+\_\+0@{M\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+S\+\_\+0}}
+\index{M\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+S\+\_\+0@{M\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+S\+\_\+0}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{M\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+S\+\_\+0}{MY_DATA_POS_0}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+Y\+\_\+\+D\+A\+T\+A\+\_\+\+P\+O\+S\+\_\+0~0x79}\hypertarget{main_8c_a98a7fc9e93c4f05f5360cd836439964e}{}\label{main_8c_a98a7fc9e93c4f05f5360cd836439964e}
+\index{main.\+c@{main.\+c}!M\+Y\+\_\+\+ID@{M\+Y\+\_\+\+ID}}
+\index{M\+Y\+\_\+\+ID@{M\+Y\+\_\+\+ID}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{M\+Y\+\_\+\+ID}{MY_ID}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+Y\+\_\+\+ID~0x11}\hypertarget{main_8c_a9399d287145fa673d60fa0e3c04d0a06}{}\label{main_8c_a9399d287145fa673d60fa0e3c04d0a06}
+
+
+\subsection{Function Documentation}
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{main(void)}{main(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}
+\index{main.\+c@{main.\+c}!system\+\_\+init@{system\+\_\+init}}
+\index{system\+\_\+init@{system\+\_\+init}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{system\+\_\+init(void)}{system_init(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void system\+\_\+init (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{main_8c_a43f5e0d6db0fb41a437cc9096b32e9b5}{}\label{main_8c_a43f5e0d6db0fb41a437cc9096b32e9b5}
+This function
+
+\begin{DoxyWarning}{Warning}
+none.
+\end{DoxyWarning}
+
+\begin{DoxyParams}{Parameters}
+{\em none.} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none. 
+\end{DoxyReturn}
+
+
+\subsection{Variable Documentation}
+\index{main.\+c@{main.\+c}!adc\+Voltage@{adc\+Voltage}}
+\index{adc\+Voltage@{adc\+Voltage}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{adc\+Voltage}{adcVoltage}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t adc\+Voltage = 0}\hypertarget{main_8c_acad6eebce40aff54c96c90f3d7e62c30}{}\label{main_8c_acad6eebce40aff54c96c90f3d7e62c30}
+\index{main.\+c@{main.\+c}!c\+\_\+status@{c\+\_\+status}}
+\index{c\+\_\+status@{c\+\_\+status}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{c\+\_\+status}{c_status}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t c\+\_\+status}\hypertarget{main_8c_ab04e8c47e24101e224c809f3e67c54ff}{}\label{main_8c_ab04e8c47e24101e224c809f3e67c54ff}
+\index{main.\+c@{main.\+c}!can\+Data\+Buffer@{can\+Data\+Buffer}}
+\index{can\+Data\+Buffer@{can\+Data\+Buffer}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{can\+Data\+Buffer}{canDataBuffer}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t can\+Data\+Buffer\mbox{[}2\mbox{]}}\hypertarget{main_8c_a9e6b8531b307ad168a11f3388aedc03a}{}\label{main_8c_a9e6b8531b307ad168a11f3388aedc03a}
+\index{main.\+c@{main.\+c}!can\+Init\+Flag@{can\+Init\+Flag}}
+\index{can\+Init\+Flag@{can\+Init\+Flag}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{can\+Init\+Flag}{canInitFlag}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t can\+Init\+Flag}\hypertarget{main_8c_a28c4027d8db8e026202c350f790dec75}{}\label{main_8c_a28c4027d8db8e026202c350f790dec75}
+\index{main.\+c@{main.\+c}!message@{message}}
+\index{message@{message}!main.\+c@{main.\+c}}
+\subsubsection[{\texorpdfstring{message}{message}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf st\+\_\+cmd\+\_\+t} message}\hypertarget{main_8c_ad644d7ab54692eb2518cdf3c8da50a6f}{}\label{main_8c_ad644d7ab54692eb2518cdf3c8da50a6f}
